@@ -133,6 +133,63 @@ nav a:hover {
     var(--white);
 }
 
+.page-hero {
+  display: grid;
+  min-height: 420px;
+  place-items: center;
+  padding: clamp(2rem, 5vw, 4rem) 1rem;
+  color: var(--white);
+  text-align: center;
+  background:
+    linear-gradient(90deg, rgba(7, 21, 43, 0.88), rgba(0, 84, 207, 0.5), rgba(7, 21, 43, 0.88)),
+    var(--navy);
+  border-bottom: 6px solid var(--blue);
+}
+
+.page-hero h1 {
+  color: var(--white);
+  text-shadow: 0 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.page-hero h1 span {
+  color: #8fc4ff;
+}
+
+.page-hero .headline,
+.page-hero .eyebrow {
+  color: #eaf3ff;
+}
+
+.soccer-page {
+  background:
+    linear-gradient(90deg, rgba(7, 21, 43, 0.88), rgba(0, 84, 207, 0.38)),
+    url("assets/soccer-run.png") center 35% / cover;
+}
+
+.basketball-page {
+  background:
+    linear-gradient(90deg, rgba(7, 21, 43, 0.9), rgba(0, 84, 207, 0.28)),
+    url("assets/basketball-hero.jpeg") center 27% / cover;
+}
+
+.highlights-page {
+  background:
+    linear-gradient(90deg, rgba(7, 21, 43, 0.9), rgba(0, 84, 207, 0.28)),
+    url("assets/soccer-team.png") center center / cover;
+}
+
+.academics-page {
+  background:
+    linear-gradient(120deg, rgba(7, 21, 43, 0.94), rgba(0, 84, 207, 0.7)),
+    var(--navy);
+}
+
+.contact-page {
+  background:
+    linear-gradient(90deg, rgba(7, 21, 43, 0.9), rgba(0, 84, 207, 0.34)),
+    url("assets/basketball-point.jpeg") center 25% / cover;
+}
+
 .hero-photo {
   position: relative;
   min-height: 520px;
@@ -335,6 +392,28 @@ h1 span {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.single-page-grid {
+  grid-template-columns: 1fr;
+}
+
+.single-page-grid .sport-panel {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.single-split {
+  grid-template-columns: 1fr;
+}
+
+.page-gallery {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.contact-coaches {
+  width: auto;
+  margin: 0;
 }
 
 .sport-panel,
