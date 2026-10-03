@@ -23,7 +23,7 @@
         <a href="contact.html">Contact</a>
       </nav>
       <details class="mobile-menu">
-        <summary>Menu</summary>
+        <summary aria-label="Open menu"><span></span><span></span><span></span></summary>
         <nav aria-label="Mobile profile pages">
           <a href="index.html">Home</a>
           <a href="about.html">About Kahsi</a>
@@ -48,10 +48,20 @@
       <section class="split-section">
         <article class="contact-panel">
           <div class="section-heading"><p>Recruiting Contact</p><h2>Reach Kahsi</h2></div>
+          <div class="contact-actions">
+            <button type="button" class="button primary request-contact-button" data-open-contact-form>Request to Contact</button>
+          </div>
           <dl class="contact-list">
-            <div><dt>Email</dt><dd>kahsi0609@gmail.com</dd></div>
-            <div><dt>Phone</dt><dd>Add phone</dd></div>
-            <div><dt>Social Links</dt><dd>Instagram: @kahsimorgan // X: @kahsi_3 // HUDL: hudl.com/profile/24947935</dd></div>
+            <div>
+              <dt>Social Links</dt>
+              <dd>
+                <div class="social-links" aria-label="Kahsi Morgan social links">
+                  <a class="social-icon instagram" href="https://www.instagram.com/kahsimorgan" target="_blank" rel="noopener" aria-label="Instagram: kahsimorgan"><span></span></a>
+                  <a class="social-icon x" href="https://x.com/kahsi_3" target="_blank" rel="noopener" aria-label="X: kahsi_3">X</a>
+                  <a class="social-icon hudl" href="http://www.hudl.com/profile/24947935" target="_blank" rel="noopener" aria-label="HUDL profile">HUDL</a>
+                </div>
+              </dd>
+            </div>
             <div><dt>Location</dt><dd>Charleston, WV</dd></div>
           </dl>
         </article>
@@ -69,5 +79,21 @@
       <img src="assets/km-logo.png" alt="">
       <div><strong>Kahsi Morgan Recruiting</strong><span>Class of 2028 // Dual-Sport Athlete</span></div>
     </footer>
+    <dialog class="contact-dialog" id="requestContactDialog" aria-labelledby="requestContactTitle">
+      <form class="request-form" method="dialog">
+        <div class="dialog-heading">
+          <h2 id="requestContactTitle">Request to Contact</h2>
+          <button type="button" class="dialog-close" data-close-contact-form aria-label="Close contact form">Close</button>
+        </div>
+        <label>Name<input name="name" type="text" autocomplete="name" required></label>
+        <label>School<input name="school" type="text" autocomplete="organization" required></label>
+        <label>Sport<select name="sport" required><option value="">Select sport</option><option>Soccer</option><option>Basketball</option><option>Both</option></select></label>
+        <label>Role Within Program<input name="role" type="text" placeholder="Coach, recruiter, assistant coach" required></label>
+        <label>Phone Number<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Email Address<input name="email" type="email" autocomplete="email" required></label>
+        <button type="submit" class="button primary">Submit Request</button>
+      </form>
+    </dialog>
+    <script src="contact-form.js"></script>
   </body>
 </html>
