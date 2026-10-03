@@ -48,7 +48,6 @@
         </div>
         <div class="hero-photo hero-photo-right">
           <img src="assets/soccer-run.png" alt="Kahsi Morgan running during soccer warmups">
-          <div class="photo-tag">Soccer</div>
         </div>
       </section>
 
@@ -265,5 +264,33 @@
         <span>Class of 2028 // Dual-Sport Athlete</span>
       </div>
     </footer>
+    <script>
+      (() => {
+        const heroImage = document.querySelector(".hero-photo-left img");
+        const isMobile = window.matchMedia("(max-width: 760px)").matches;
+
+        if (!heroImage || !isMobile) {
+          return;
+        }
+
+        const lastPhoto = localStorage.getItem("kahsiHomeHeroPhoto");
+        const nextPhoto = lastPhoto === "soccer" ? "basketball" : "soccer";
+        const photos = {
+          basketball: {
+            src: "assets/basketball-hero.jpeg",
+            alt: "Kahsi Morgan seated in basketball uniform holding a basketball"
+          },
+          soccer: {
+            src: "assets/soccer-run.png",
+            alt: "Kahsi Morgan running during soccer warmups"
+          }
+        };
+
+        heroImage.src = photos[nextPhoto].src;
+        heroImage.alt = photos[nextPhoto].alt;
+        heroImage.closest(".hero-photo-left").dataset.heroSport = nextPhoto;
+        localStorage.setItem("kahsiHomeHeroPhoto", nextPhoto);
+      })();
+    </script>
   </body>
 </html>

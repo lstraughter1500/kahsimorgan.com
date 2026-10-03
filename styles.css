@@ -221,26 +221,16 @@ nav a:hover {
   object-position: center 24%;
 }
 
+.hero-photo-left[data-hero-sport="soccer"] img {
+  object-position: 48% center;
+}
+
 .hero-photo-right {
   clip-path: polygon(16% 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .hero-photo-right img {
   object-position: 47% center;
-}
-
-.photo-tag {
-  position: absolute;
-  right: 1.2rem;
-  bottom: 1.2rem;
-  z-index: 2;
-  padding: 0.55rem 1rem;
-  color: var(--white);
-  background: rgba(7, 21, 43, 0.88);
-  border-bottom: 4px solid var(--royal);
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  transform: skewX(-10deg);
 }
 
 .hero-content {
