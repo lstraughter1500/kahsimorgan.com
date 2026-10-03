@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <div class="intro-overlay" data-intro-overlay aria-hidden="true">
+      <div class="intro-stage" aria-hidden="true">
+        <div class="intro-ball intro-soccer-ball"></div>
+        <div class="intro-ball intro-basketball"></div>
+        <div class="intro-sport-word intro-word-soccer">Soccer</div>
+        <div class="intro-sport-word intro-word-basketball">Basketball</div>
+        <div class="intro-brand-lockup">
+          <strong>Kahsi Morgan</strong>
+          <span>Dual-Sport Athlete &bull; Class of 2028</span>
+        </div>
+      </div>
+    </div>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Kahsi Morgan Recruiting home">
         <img src="assets/km-logo.png" alt="KM logo">
@@ -378,6 +390,7 @@
     </dialog>
     <script src="contact-form.js"></script>
     <script src="event-countdown.js"></script>
+    <script src="intro.js"></script>
     <script>
       (() => {
         const heroImage = document.querySelector(".hero-photo-left img");
