@@ -475,6 +475,17 @@ h1 span {
   box-shadow: 0 10px 28px rgba(7, 21, 43, 0.08);
 }
 
+.sport-panel-link {
+  display: block;
+  color: inherit;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.sport-panel-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 34px rgba(7, 21, 43, 0.16);
+}
+
 .panel-title {
   display: flex;
   align-items: center;
@@ -687,15 +698,53 @@ ul {
 }
 
 .social-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.social-link-card {
+  display: grid;
+  min-height: 124px;
+  place-items: center;
+  align-content: center;
+  gap: 0.4rem;
+  padding: 0.85rem 0.7rem;
+  color: var(--ink);
+  background: linear-gradient(180deg, #ffffff, #f6fbff);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(7, 21, 43, 0.08);
+  text-align: center;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.social-link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(7, 21, 43, 0.15);
+}
+
+.social-link-card strong {
+  color: var(--navy);
+  font-family: Arial, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.social-link-card small {
+  color: #38557e;
+  font-family: Arial, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .social-icon {
   display: inline-grid;
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   place-items: center;
   color: var(--white);
   background: #07152b;
@@ -755,9 +804,94 @@ ul {
 }
 
 .social-icon.hudl {
-  width: 72px;
+  width: 52px;
   background: #ff6a00;
-  font-size: 0.8rem;
+  padding: 0;
+}
+
+.social-icon.hudl img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.sport-detail-section {
+  width: min(96%, 1180px);
+  margin: 1rem auto 1.2rem;
+}
+
+.sport-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.sport-gallery figure {
+  position: relative;
+  min-height: 320px;
+  margin: 0;
+  overflow: hidden;
+  background: #091426;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(7, 21, 43, 0.12);
+}
+
+.sport-gallery img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+}
+
+.sport-gallery figcaption {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  padding: 0.72rem 0.85rem;
+  color: var(--white);
+  background: rgba(7, 21, 43, 0.88);
+  border-left: 5px solid var(--orange);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.video-link-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.video-link-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  color: var(--white);
+  background: linear-gradient(90deg, var(--navy), var(--blue));
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.video-link-card strong,
+.video-link-card small {
+  display: block;
+}
+
+.video-link-card strong {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  text-transform: uppercase;
+}
+
+.video-link-card small {
+  color: #dcecff;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .contact-dialog {
@@ -1045,8 +1179,17 @@ footer img {
   .academics-layout,
   .highlight-grid,
   .coach-grid,
-  .about-section {
+  .about-section,
+  .sport-gallery,
+  .social-links {
     grid-template-columns: 1fr;
+  }
+
+  .social-link-card {
+    min-height: 82px;
+    grid-template-columns: auto 1fr;
+    justify-items: start;
+    text-align: left;
   }
 
   .stat-table div,
