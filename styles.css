@@ -122,6 +122,18 @@ nav a:hover {
   border-bottom-color: var(--royal);
 }
 
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu summary {
+  list-style: none;
+}
+
+.mobile-menu summary::-webkit-details-marker {
+  display: none;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(260px, 0.85fr) minmax(320px, 1.25fr) minmax(260px, 0.85fr);
@@ -781,13 +793,63 @@ footer img {
 
 @media (max-width: 760px) {
   .site-header {
-    position: static;
-    align-items: flex-start;
-    flex-direction: column;
+    position: sticky;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.75rem;
   }
 
-  nav {
-    justify-content: flex-start;
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+    margin-left: auto;
+    position: relative;
+  }
+
+  .mobile-menu summary {
+    cursor: pointer;
+    padding: 0.7rem 0.85rem;
+    color: var(--white);
+    background: var(--blue);
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    border-radius: 4px;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.22);
+    font-family: Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .mobile-menu[open] summary {
+    background: #00399f;
+  }
+
+  .mobile-menu nav {
+    position: absolute;
+    top: calc(100% + 0.65rem);
+    right: 0;
+    z-index: 20;
+    display: grid;
+    width: min(78vw, 280px);
+    gap: 0;
+    overflow: hidden;
+    background: rgba(5, 8, 14, 0.98);
+    border: 1px solid rgba(145, 193, 255, 0.35);
+    border-radius: 6px;
+    box-shadow: 0 20px 36px rgba(0, 0, 0, 0.38);
+  }
+
+  .mobile-menu nav a {
+    padding: 0.95rem 1rem;
+    border-bottom: 1px solid rgba(145, 193, 255, 0.18);
+  }
+
+  .mobile-menu nav a:last-child {
+    border-bottom: 0;
   }
 
   .hero {
