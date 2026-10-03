@@ -1277,7 +1277,26 @@ footer img {
   }
 
   .countdown-clock {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.45rem;
+    padding: 0.7rem;
+    background: rgba(7, 21, 43, 0.04);
+  }
+
+  .countdown-clock article {
+    min-height: 86px;
+    padding: 0.55rem 0.25rem;
+    border: 1px solid rgba(56, 85, 126, 0.28);
+    border-radius: 8px;
+  }
+
+  .countdown-clock strong {
+    font-size: clamp(2rem, 11vw, 3.5rem);
+  }
+
+  .countdown-clock span {
+    font-size: clamp(0.58rem, 2.25vw, 0.72rem);
+    letter-spacing: 0;
   }
 
   .panel-body,
@@ -1313,10 +1332,6 @@ footer img {
 
   .quick-stats {
     grid-template-columns: 1fr;
-  }
-
-  .countdown-clock {
-    grid-template-columns: 1fr 1fr;
   }
 
   .button {
