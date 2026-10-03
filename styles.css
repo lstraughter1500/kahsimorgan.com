@@ -390,6 +390,13 @@ h1 span {
   text-transform: uppercase;
 }
 
+.quick-stats article:last-child strong {
+  font-size: clamp(0.95rem, 1.4vw, 1.25rem);
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+  text-transform: none;
+}
+
 .profile-grid,
 .split-section,
 .highlights,
@@ -530,6 +537,7 @@ h1 span {
   font-family: Arial, sans-serif;
   font-size: 0.95rem;
   font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .media-card,
