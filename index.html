@@ -62,23 +62,30 @@
         </div>
       </section>
 
-      <section class="quick-stats" aria-label="Key profile details">
-        <article>
-          <span>GPA</span>
-          <strong>4.8</strong>
-        </article>
-        <article>
-          <span>Height</span>
-          <strong>5'10"</strong>
-        </article>
-        <article>
-          <span>Weight</span>
-          <strong>155 lbs</strong>
-        </article>
-        <article>
-          <span>Graduation Year</span>
-          <strong>2028</strong>
-        </article>
+      <section class="countdown-section" aria-label="Next game countdown">
+        <div class="countdown-info">
+          <span>Next Up</span>
+          <strong data-next-event-title>MSAC Placement Game</strong>
+          <p data-next-event-details>Opponent & time TBD</p>
+        </div>
+        <div class="countdown-clock" aria-label="Countdown to next game">
+          <article>
+            <strong data-countdown-days>00</strong>
+            <span>Days</span>
+          </article>
+          <article>
+            <strong data-countdown-hours>00</strong>
+            <span>Hours</span>
+          </article>
+          <article>
+            <strong data-countdown-minutes>00</strong>
+            <span>Minutes</span>
+          </article>
+          <article>
+            <strong data-countdown-seconds>00</strong>
+            <span>Seconds</span>
+          </article>
+        </div>
       </section>
 
       <section class="profile-grid">
@@ -220,6 +227,69 @@
         </article>
       </section>
 
+      <section class="events-section" aria-label="Upcoming events">
+        <div class="section-heading">
+          <p>Upcoming Events</p>
+          <h2>Schedule & Showcases</h2>
+        </div>
+        <div class="events-grid">
+          <article class="events-panel">
+            <div class="panel-title">
+              <span>Soccer Schedule</span>
+              <img src="assets/km-logo.png" alt="">
+            </div>
+            <div class="event-list">
+              <article class="event-card next-event-card">
+                <span>Oct. 8</span>
+                <strong>MSAC Placement Game</strong>
+                <p>Opponent & time TBD</p>
+              </article>
+              <article class="event-card">
+                <span>Oct. 10</span>
+                <strong>vs Nicholas County</strong>
+                <p>1:00 PM @ Capital High School</p>
+              </article>
+              <article class="event-card">
+                <span>Oct. 13</span>
+                <strong>vs PikeView</strong>
+                <p>8:00 PM @ Capital High School</p>
+              </article>
+              <article class="event-card">
+                <span>Oct. 17</span>
+                <strong>vs Charleston Catholic</strong>
+                <p>1:00 PM @ Capital High School</p>
+              </article>
+            </div>
+          </article>
+          <article class="events-panel">
+            <div class="panel-title">
+              <span>Basketball Schedule</span>
+              <img src="assets/km-logo.png" alt="">
+            </div>
+            <div class="event-list">
+              <article class="event-card muted-event">
+                <span>Coming Soon</span>
+                <strong>Basketball Schedule</strong>
+                <p>Games will be added when dates are available.</p>
+              </article>
+            </div>
+          </article>
+          <article class="events-panel">
+            <div class="panel-title">
+              <span>Showcases</span>
+              <img src="assets/km-logo.png" alt="">
+            </div>
+            <div class="event-list">
+              <article class="event-card muted-event">
+                <span>Coming Soon</span>
+                <strong>Upcoming Showcases</strong>
+                <p>Showcase appearances will be posted here.</p>
+              </article>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="highlights" id="highlights" aria-label="Photos and recent highlights">
         <div class="section-heading">
           <p>Photos & Highlights</p>
@@ -307,6 +377,7 @@
       </form>
     </dialog>
     <script src="contact-form.js"></script>
+    <script src="event-countdown.js"></script>
     <script>
       (() => {
         const heroImage = document.querySelector(".hero-photo-left img");
