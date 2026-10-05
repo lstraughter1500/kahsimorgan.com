@@ -30,6 +30,7 @@
   dialog.querySelector(".request-form").addEventListener("submit", (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    const message = data.get("message").trim();
     const lines = [
       "Request to contact Kahsi Morgan",
       "",
@@ -41,9 +42,13 @@
       `Email: ${data.get("email")}`
     ];
 
+    if (message) {
+      lines.push("", "Message:", message);
+    }
+
     const subject = encodeURIComponent("Kahsi Morgan recruiting contact request");
     const body = encodeURIComponent(lines.join("\n"));
-    window.location.href = `mailto:london@capitalbaseball.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:skmorgan05@hotmail.com?subject=${subject}&body=${body}`;
     dialog.close();
     event.currentTarget.reset();
   });

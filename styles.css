@@ -1127,7 +1127,8 @@ ul {
 }
 
 .request-form input,
-.request-form select {
+.request-form select,
+.request-form textarea {
   width: 100%;
   min-height: 46px;
   padding: 0.7rem 0.8rem;
@@ -1136,6 +1137,10 @@ ul {
   border: 1px solid var(--line);
   border-radius: 4px;
   font: 800 1rem Arial, sans-serif;
+}
+
+.request-form textarea {
+  resize: vertical;
 }
 
 .contact-list div {
