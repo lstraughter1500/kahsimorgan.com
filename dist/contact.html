@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | Kahsi Morgan Recruiting</title>
+    <meta name="description" content="Recruiting contact and coach references for Kahsi Morgan.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Kahsi Morgan Recruiting home">
+        <img src="assets/km-logo.png" alt="KM logo">
+        <span><strong>Kahsi Morgan</strong><small>Recruiting</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Profile pages">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Kahsi</a>
+        <a href="soccer.html">Soccer</a>
+        <a href="basketball.html">Basketball</a>
+        <a href="highlights.html">Highlights</a>
+        <a href="academics.html">Academics</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <details class="mobile-menu">
+        <summary aria-label="Open menu"><span></span><span></span><span></span></summary>
+        <nav aria-label="Mobile profile pages">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Kahsi</a>
+          <a href="soccer.html">Soccer</a>
+          <a href="basketball.html">Basketball</a>
+          <a href="highlights.html">Highlights</a>
+          <a href="academics.html">Academics</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </details>
+    </header>
+
+    <main>
+      <section class="page-hero contact-page">
+        <div>
+          <p class="eyebrow">Recruiting // Coaches // Contact</p>
+          <h1>Contact <span>Kahsi</span></h1>
+          <p class="headline">Recruiting details pending</p>
+        </div>
+      </section>
+
+      <section class="split-section">
+        <article class="contact-panel">
+          <div class="section-heading"><p>Recruiting Contact</p><h2>Reach Kahsi</h2></div>
+          <div class="contact-actions">
+            <button type="button" class="button primary request-contact-button" data-open-contact-form>Request to Contact</button>
+          </div>
+          <dl class="contact-list">
+            <div>
+              <dt>Social Media</dt>
+              <dd>
+                <div class="social-links" aria-label="Kahsi Morgan social links">
+                  <a class="social-icon instagram" href="https://www.instagram.com/kahsimorgan" target="_blank" rel="noopener" aria-label="Instagram: kahsimorgan"><span></span></a>
+                  <a class="social-icon x" href="https://x.com/kahsi_3" target="_blank" rel="noopener" aria-label="X: kahsi_3">X</a>
+                  <a class="social-icon hudl" href="http://www.hudl.com/profile/24947935" target="_blank" rel="noopener" aria-label="HUDL profile"><img src="assets/hudl-logo.png" alt=""></a>
+                </div>
+              </dd>
+            </div>
+            <div><dt>Location</dt><dd>Charleston, WV</dd></div>
+          </dl>
+        </article>
+        <article class="coach-section contact-coaches" aria-label="Coach references">
+          <div class="section-heading"><p>Coach References</p><h2>References Pending</h2></div>
+          <div class="coach-grid">
+            <article><span>Soccer Coach</span><strong>Cody Freas</strong><p>Add phone and email</p></article>
+            <article><span>Basketball Coach</span><strong>Josh "Cookie" Miller</strong><p>Add phone and email</p></article>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <img src="assets/km-logo.png" alt="">
+      <div><strong>Kahsi Morgan Recruiting</strong><span>Class of 2028 // Dual-Sport Athlete</span></div>
+    </footer>
+    <dialog class="contact-dialog" id="requestContactDialog" aria-labelledby="requestContactTitle">
+      <form class="request-form" method="dialog">
+        <div class="dialog-heading">
+          <h2 id="requestContactTitle">Request to Contact</h2>
+          <button type="button" class="dialog-close" data-close-contact-form aria-label="Close contact form">Close</button>
+        </div>
+        <label>Name<input name="name" type="text" autocomplete="name" required></label>
+        <label>School<input name="school" type="text" autocomplete="organization" required></label>
+        <label>Sport<select name="sport" required><option value="">Select sport</option><option>Soccer</option><option>Basketball</option><option>Both</option></select></label>
+        <label>Role Within Program<input name="role" type="text" placeholder="Coach, recruiter, assistant coach" required></label>
+        <label>Phone Number<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Email Address<input name="email" type="email" autocomplete="email" required></label>
+        <label>Message<textarea name="message" rows="4" placeholder="Optional message"></textarea></label>
+        <button type="submit" class="button primary">Submit Request</button>
+      </form>
+    </dialog>
+    <script src="contact-form.js"></script>
+  </body>
+</html>
