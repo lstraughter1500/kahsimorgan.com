@@ -631,6 +631,46 @@ h1 span {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.dual-sport-tiles {
+  align-items: stretch;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.highlight-tile {
+  display: block;
+  min-width: 0;
+  color: var(--white);
+  padding: 0.65rem;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(7, 21, 43, 0.14);
+}
+
+.highlight-tile figure {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 10;
+  min-height: clamp(320px, 36vw, 480px);
+  max-width: 100%;
+  isolation: isolate;
+  border-radius: 6px;
+}
+
+.highlight-tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 220ms ease;
+}
+
+.highlight-tile:hover img {
+  opacity: 0.9;
+}
+
 .contact-coaches {
   width: auto;
   margin: 0;
@@ -1012,6 +1052,15 @@ ul {
   box-shadow: 0 12px 30px rgba(7, 21, 43, 0.12);
 }
 
+.media-gallery figure {
+  cursor: pointer;
+}
+
+.media-gallery figure:focus-visible {
+  outline: 4px solid var(--orange);
+  outline-offset: 4px;
+}
+
 .sport-gallery img {
   width: 100%;
   height: 100%;
@@ -1158,6 +1207,11 @@ ul {
   padding-top: 1rem;
 }
 
+.highlight-grid.dual-sport-tiles {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.1rem, 2.4vw, 2rem);
+}
+
 .highlight-grid figure {
   min-height: 280px;
   box-shadow: 0 12px 30px rgba(7, 21, 43, 0.12);
@@ -1168,6 +1222,17 @@ ul {
   height: 100%;
   min-height: 280px;
   object-fit: cover;
+}
+
+.highlight-grid .highlight-tile img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
 }
 
 .highlight-grid figure:nth-child(2) img {
@@ -1185,6 +1250,127 @@ ul {
   border-left: 5px solid var(--orange);
   font-size: 1.25rem;
   text-transform: uppercase;
+}
+
+.highlight-grid figcaption strong,
+.highlight-grid figcaption span {
+  display: block;
+}
+
+.highlight-grid figcaption strong {
+  font-size: clamp(1.7rem, 4vw, 3rem);
+  line-height: 0.95;
+}
+
+.highlight-grid figcaption span {
+  margin-top: 0.18rem;
+  font-family: Arial, sans-serif;
+  font-size: clamp(0.78rem, 1.5vw, 1rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.media-section {
+  padding-bottom: 0.5rem;
+}
+
+.media-section .sport-gallery img {
+  object-fit: contain;
+}
+
+.gallery-view-all {
+  margin: 1rem 0 0;
+}
+
+body.gallery-lightbox-open {
+  overflow: hidden;
+}
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  max-width: none;
+  height: 100vh;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  overscroll-behavior: contain;
+  color: var(--white);
+  background: rgba(5, 8, 14, 0.96);
+  border: 0;
+  border-radius: 0;
+}
+
+.gallery-lightbox::backdrop {
+  background: rgba(5, 8, 14, 0.78);
+}
+
+.gallery-lightbox figure {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: clamp(4rem, 8vh, 5.25rem) clamp(1rem, 7vw, 5rem) clamp(5rem, 10vh, 6rem);
+}
+
+.gallery-lightbox img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.gallery-close,
+.gallery-arrow,
+.gallery-save {
+  position: absolute;
+  z-index: 3;
+}
+
+.gallery-close {
+  top: 1rem;
+  right: 1rem;
+  padding: 0.65rem 0.9rem;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+  font: 900 0.82rem Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.gallery-arrow {
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 64px;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 6px;
+  font-size: 2.4rem;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.gallery-arrow-prev {
+  left: 1rem;
+}
+
+.gallery-arrow-next {
+  right: 1rem;
+}
+
+.gallery-save {
+  right: 1rem;
+  bottom: 1rem;
 }
 
 .coach-section {
@@ -1596,6 +1782,26 @@ footer img {
   .sport-gallery,
   .sport-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .highlight-grid.dual-sport-tiles {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-lightbox {
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  .gallery-lightbox figure {
+    padding: 4.25rem 2.75rem 5.5rem;
+  }
+
+  .gallery-arrow {
+    width: 40px;
+    height: 56px;
   }
 
   .social-links {

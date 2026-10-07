@@ -277,19 +277,25 @@
           <p>Photos & Highlights</p>
           <h2>Dual-Sport Gallery</h2>
         </div>
-        <div class="highlight-grid">
-          <figure>
-            <img src="assets/basketball-point.jpeg" alt="Kahsi Morgan pointing while spinning a basketball">
-            <figcaption>Basketball Media Day</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/soccer-team.png" alt="Kahsi Morgan with soccer teammates">
-            <figcaption>Team Leadership</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/basketball-towel.jpeg" alt="Kahsi Morgan holding a basketball with towel over shoulders">
-            <figcaption>Basketball Portrait</figcaption>
-          </figure>
+        <div class="highlight-grid dual-sport-tiles">
+          <a class="highlight-tile" href="basketball-highlights.html" data-media-tile="basketball" aria-label="Open basketball photos and highlights">
+            <figure>
+              <img src="assets/basketball-point.jpeg" alt="Kahsi Morgan pointing while spinning a basketball">
+              <figcaption>
+                <strong>Basketball</strong>
+                <span>Photos & Highlights</span>
+              </figcaption>
+            </figure>
+          </a>
+          <a class="highlight-tile" href="soccer-highlights.html" data-media-tile="soccer" aria-label="Open soccer photos and highlights">
+            <figure>
+              <img src="assets/soccer-team.png" alt="Kahsi Morgan with soccer teammates">
+              <figcaption>
+                <strong>Soccer</strong>
+                <span>Photos & Highlights</span>
+              </figcaption>
+            </figure>
+          </a>
         </div>
       </section>
 
@@ -364,6 +370,7 @@
     </dialog>
     <script src="contact-form.js"></script>
     <script src="event-countdown.js"></script>
+    <script src="media-tiles.js"></script>
     <script src="intro.js"></script>
     <script>
       (() => {
