@@ -1,10 +1,10 @@
 (() => {
   const events = [
     {
-      title: "MSAC Placement Game",
-      opponent: "Opponent TBD",
-      details: "Opponent & time TBD",
-      date: "2026-10-08T00:00:00-04:00"
+      title: "vs Cabell Midland",
+      opponent: "Cabell Midland",
+      details: "8:15 PM @ Capital High School",
+      date: "2026-10-08T20:15:00-04:00"
     },
     {
       title: "vs Nicholas County",
