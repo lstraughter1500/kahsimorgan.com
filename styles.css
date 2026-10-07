@@ -393,13 +393,15 @@ nav a:hover {
 }
 
 .hero-content::before {
-  content: "KM";
+  content: "";
   position: absolute;
-  inset: auto auto 1rem 50%;
+  inset: auto auto -1.3rem 50%;
   z-index: -1;
-  color: rgba(0, 84, 207, 0.07);
-  font-size: clamp(10rem, 20vw, 18rem);
-  line-height: 0.7;
+  width: clamp(24rem, 42vw, 38rem);
+  aspect-ratio: 1.75;
+  background: rgba(0, 84, 207, 0.07);
+  -webkit-mask: url("assets/km-logo.png") center / contain no-repeat;
+  mask: url("assets/km-logo.png") center / contain no-repeat;
   transform: translateX(-50%);
 }
 
