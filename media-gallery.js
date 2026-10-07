@@ -14,7 +14,8 @@
       <img alt="">
     </figure>
     <button class="gallery-arrow gallery-arrow-next" type="button" aria-label="Next image">&rsaquo;</button>
-    <a class="button primary gallery-save" href="#" download>Save Image</a>
+    <button class="button primary gallery-save" type="button">Save Image</button>
+    <p class="mobile-save-instruction">Press and hold the image to save it.</p>
   `;
   document.body.append(dialog);
 
@@ -22,7 +23,7 @@
   const closeButton = dialog.querySelector(".gallery-close");
   const prevButton = dialog.querySelector(".gallery-arrow-prev");
   const nextButton = dialog.querySelector(".gallery-arrow-next");
-  const saveLink = dialog.querySelector(".gallery-save");
+  const saveButton = dialog.querySelector(".gallery-save");
   let activeImages = [];
   let activeIndex = 0;
 
@@ -48,8 +49,48 @@
 
     lightboxImage.src = image.src;
     lightboxImage.alt = image.alt;
-    saveLink.href = image.src;
-    saveLink.download = filenameFromSrc(image.src);
+  };
+
+  const downloadImage = (image) => {
+    const opened = window.open(image.src, "_blank", "noopener");
+
+    if (!opened) {
+      window.location.href = image.src;
+    }
+  };
+
+  const saveImage = async () => {
+    const image = activeImages[activeIndex];
+
+    if (!image) {
+      return;
+    }
+
+    try {
+      const response = await fetch(image.src);
+      const blob = await response.blob();
+      const file = new File([blob], filenameFromSrc(image.src), { type: blob.type || "image/jpeg" });
+
+      if (navigator.canShare?.({ files: [file] })) {
+        await navigator.share({
+          files: [file],
+          title: "Kahsi Morgan photo"
+        });
+        return;
+      }
+
+      if (navigator.share) {
+        await navigator.share({
+          title: "Kahsi Morgan photo",
+          url: image.src
+        });
+        return;
+      }
+    } catch (error) {
+      // Fall back to browser download below.
+    }
+
+    downloadImage(image);
   };
 
   const openLightbox = (images, index) => {
@@ -68,6 +109,7 @@
   closeButton.addEventListener("click", () => dialog.close());
   prevButton.addEventListener("click", () => moveLightbox(-1));
   nextButton.addEventListener("click", () => moveLightbox(1));
+  saveButton.addEventListener("click", saveImage);
 
   dialog.addEventListener("close", () => {
     document.body.classList.remove("gallery-lightbox-open");
