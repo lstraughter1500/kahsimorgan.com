@@ -574,6 +574,141 @@ h1 span {
   line-height: 0.85;
 }
 
+.showtime-panel {
+  display: none;
+}
+
+.countdown-section.is-showtime {
+  isolation: isolate;
+  animation: showtimeFlash 720ms ease-out;
+}
+
+.countdown-section.is-showtime .countdown-clock {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, #00399f, rgba(0, 84, 207, 0.98) 38%, rgba(7, 21, 43, 0.98) 72%, #05080e);
+}
+
+.countdown-section.is-showtime .countdown-clock::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(100deg, transparent 0 26%, rgba(255, 255, 255, 0.24) 42%, transparent 58% 100%),
+    radial-gradient(circle at 50% 50%, rgba(145, 193, 255, 0.42), transparent 62%);
+  opacity: 0.8;
+  animation: showtimeSweep 1800ms ease-in-out infinite;
+}
+
+.countdown-section.is-showtime .countdown-clock article {
+  display: none;
+}
+
+.countdown-section.is-showtime .showtime-panel {
+  display: grid;
+  grid-column: 1 / -1;
+  min-height: 112px;
+  place-items: center;
+  align-content: center;
+  padding: 0.85rem 1.25rem;
+  color: var(--white);
+  text-align: center;
+  background: transparent;
+}
+
+.showtime-panel h2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.22em;
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(1.6rem, 4.2vw, 3.65rem);
+  font-weight: 900;
+  line-height: 0.92;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 24px rgba(11, 103, 255, 0.9),
+    0 0 48px rgba(11, 103, 255, 0.64);
+  animation: showtimeHeadlineIn 700ms ease-out both, showtimePulse 1250ms ease-in-out infinite;
+}
+
+.showtime-panel h2 span {
+  display: inline;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-shadow: inherit;
+}
+
+@keyframes showtimeFlash {
+  0% {
+    filter: brightness(2.4);
+    box-shadow: 0 0 0 rgba(11, 103, 255, 0);
+  }
+
+  100% {
+    filter: brightness(1);
+    box-shadow: var(--shadow);
+  }
+}
+
+@keyframes showtimeHeadlineIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes showtimeGlowIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+    text-shadow: 0 0 0 rgba(11, 103, 255, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes showtimePulse {
+  0%,
+  100% {
+    filter: brightness(1);
+    transform: scale(1);
+  }
+
+  50% {
+    filter: brightness(1.35);
+    transform: scale(1.025);
+  }
+}
+
+@keyframes showtimeSweep {
+  0%,
+  100% {
+    opacity: 0.48;
+    transform: translateX(-18%);
+  }
+
+  50% {
+    opacity: 0.95;
+    transform: translateX(18%);
+  }
+}
+
 .quick-stats article {
   min-height: 92px;
   padding: 1rem 1.2rem;
@@ -1792,6 +1927,11 @@ footer img {
   .countdown-clock span {
     font-size: clamp(0.58rem, 2.25vw, 0.72rem);
     letter-spacing: 0;
+  }
+
+  .showtime-panel h2 {
+    font-size: clamp(1.45rem, 7.8vw, 2.65rem);
+    white-space: normal;
   }
 
   .panel-body,

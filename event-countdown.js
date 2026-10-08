@@ -26,6 +26,8 @@
     }
   ];
 
+  const showtimeDuration = 90 * 60 * 1000;
+  const section = document.querySelector(".countdown-section");
   const title = document.querySelector("[data-next-event-title]");
   const details = document.querySelector("[data-next-event-details]");
   const days = document.querySelector("[data-countdown-days]");
@@ -39,17 +41,36 @@
 
   const format = (value) => String(Math.max(0, value)).padStart(2, "0");
 
+  const setClock = (dayCount, hourCount, minuteCount, secondCount) => {
+    days.textContent = format(dayCount);
+    hours.textContent = format(hourCount);
+    minutes.textContent = format(minuteCount);
+    seconds.textContent = format(secondCount);
+  };
+
   const updateCountdown = () => {
     const now = Date.now();
-    const nextEvent = events.find((event) => new Date(event.date).getTime() >= now);
+    const activeEvent = events.find((event) => {
+      const eventTime = new Date(event.date).getTime();
+      return eventTime <= now && now < eventTime + showtimeDuration;
+    });
+
+    if (activeEvent) {
+      section?.classList.add("is-showtime");
+      title.textContent = activeEvent.title;
+      details.textContent = activeEvent.details;
+      setClock(0, 0, 0, 0);
+      return;
+    }
+
+    section?.classList.remove("is-showtime");
+
+    const nextEvent = events.find((event) => new Date(event.date).getTime() > now);
 
     if (!nextEvent) {
       title.textContent = "Schedule Complete";
       details.textContent = "New events will be posted soon.";
-      days.textContent = "00";
-      hours.textContent = "00";
-      minutes.textContent = "00";
-      seconds.textContent = "00";
+      setClock(0, 0, 0, 0);
       return;
     }
 
@@ -62,10 +83,7 @@
 
     title.textContent = nextEvent.title;
     details.textContent = nextEvent.details;
-    days.textContent = format(dayCount);
-    hours.textContent = format(hourCount);
-    minutes.textContent = format(minuteCount);
-    seconds.textContent = format(secondCount);
+    setClock(dayCount, hourCount, minuteCount, secondCount);
   };
 
   updateCountdown();
