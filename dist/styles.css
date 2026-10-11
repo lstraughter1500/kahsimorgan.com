@@ -1208,7 +1208,10 @@ ul {
 }
 
 .social-icon.x .social-mark {
-  font-size: 1.35rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .social-icon.hudl {
@@ -2040,20 +2043,22 @@ footer img {
 
   .social-links {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.7rem;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
     justify-content: stretch;
   }
 
   .social-icon {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
     min-width: 0;
     height: auto;
-    min-height: 96px;
-    gap: 0.55rem;
-    padding: 0.7rem 0.35rem;
+    min-height: 72px;
+    gap: 1rem;
+    padding: 0.78rem 1rem;
     border-radius: 14px;
   }
 
@@ -2063,7 +2068,13 @@ footer img {
   }
 
   .social-icon.x .social-mark {
-    line-height: 1;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+  }
+
+  .social-icon.hudl {
+    width: 100%;
   }
 
   .social-icon.hudl .social-mark {
@@ -2075,8 +2086,8 @@ footer img {
   .social-name {
     display: block;
     color: var(--white);
-    font-size: 0.72rem;
-    letter-spacing: 0.06em;
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
     line-height: 1;
     text-transform: uppercase;
   }
