@@ -912,6 +912,12 @@ h1 span {
   margin: 0;
 }
 
+.profile-grid:not(.single-page-grid) .stat-table {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 .stat-table div,
 .contact-list div {
   display: grid;
@@ -929,6 +935,43 @@ h1 span {
   font-size: 0.95rem;
   font-weight: 800;
   overflow-wrap: anywhere;
+}
+
+.profile-action-row {
+  display: block;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-bottom: 0;
+}
+
+.profile-action-row dd {
+  display: block;
+}
+
+.profile-cta {
+  display: inline-grid;
+  place-items: center;
+  min-height: 42px;
+  width: 100%;
+  padding: 0.66rem 0.9rem;
+  color: var(--white);
+  background: #005bd8;
+  border: 2px solid #005bd8;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px rgba(0, 91, 216, 0.2);
+  font-family: Arial, sans-serif;
+  font-size: 0.84rem;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.sport-panel-link:hover .profile-cta {
+  background: #07152b;
+  border-color: #8fc4ff;
+  transform: translateY(-1px);
 }
 
 .media-card,
@@ -976,6 +1019,13 @@ h1 span {
   padding: 0.8rem 1rem;
   color: var(--white);
   background: linear-gradient(0deg, rgba(7, 21, 43, 0.92), transparent);
+}
+
+.media-card[data-profile-tile]::before,
+.media-card[data-profile-tile] figcaption,
+.media-card[data-profile-feature]::before,
+.media-card[data-profile-feature] figcaption {
+  display: none;
 }
 
 .media-card strong,
@@ -1851,21 +1901,30 @@ footer img {
 
   .mobile-menu nav {
     position: fixed;
-    top: 92px;
-    left: 50%;
+    top: 76px;
+    right: 0;
+    left: 0;
     z-index: 20;
     display: grid;
-    width: min(84vw, 320px);
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+    width: 100%;
+    max-width: none;
+    margin: 0;
     gap: 0;
     overflow: hidden;
-    background: rgba(5, 8, 14, 0.98);
-    border: 1px solid rgba(145, 193, 255, 0.35);
-    border-radius: 6px;
+    background: rgba(5, 8, 14, 0.96);
+    border-top: 1px solid rgba(145, 193, 255, 0.35);
+    border-bottom: 1px solid rgba(145, 193, 255, 0.35);
+    border-radius: 0;
     box-shadow: 0 20px 36px rgba(0, 0, 0, 0.38);
-    transform: translateX(-50%);
   }
 
   .mobile-menu nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     padding: 1.05rem 1.2rem;
     border-bottom: 1px solid rgba(145, 193, 255, 0.18);
     text-align: center;

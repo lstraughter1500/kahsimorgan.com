@@ -137,9 +137,15 @@
 
   galleries.forEach((gallery) => {
     const showAllButton = gallery.parentElement.querySelector("[data-gallery-show-all]");
-    const figures = shuffle(Array.from(gallery.querySelectorAll("figure")));
+    const shuffledFigures = shuffle(Array.from(gallery.querySelectorAll("figure")));
+    const defaultLimit = window.matchMedia("(max-width: 760px)").matches ? 3 : 6;
+    const featuredSrc = window.kahsiFeaturedProfileImages?.[gallery.dataset.gallerySport];
+    const matchingFeatured = (figure) => figure.querySelector("img")?.getAttribute("src") === featuredSrc;
+    const figures = featuredSrc && shuffledFigures.length > defaultLimit
+      ? shuffledFigures.filter((figure) => !matchingFeatured(figure)).concat(shuffledFigures.filter(matchingFeatured))
+      : shuffledFigures;
     const images = figures.map((figure) => figure.querySelector("img")).filter(Boolean);
-    const defaultCount = Math.min(6, figures.length);
+    const defaultCount = Math.min(defaultLimit, figures.length);
 
     figures.forEach((figure, index) => {
       gallery.append(figure);
