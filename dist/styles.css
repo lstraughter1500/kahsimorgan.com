@@ -1158,6 +1158,10 @@ ul {
   transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
+.social-name {
+  display: none;
+}
+
 .social-icon:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 26px rgba(7, 21, 43, 0.2);
@@ -1167,7 +1171,7 @@ ul {
   background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
 }
 
-.social-icon.instagram span {
+.social-icon.instagram .social-mark {
   display: block;
   position: relative;
   width: 25px;
@@ -1176,7 +1180,7 @@ ul {
   border-radius: 8px;
 }
 
-.social-icon.instagram span::before {
+.social-icon.instagram .social-mark::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1188,7 +1192,7 @@ ul {
   transform: translate(-50%, -50%);
 }
 
-.social-icon.instagram span::after {
+.social-icon.instagram .social-mark::after {
   content: "";
   position: absolute;
   top: 3px;
@@ -1201,6 +1205,9 @@ ul {
 
 .social-icon.x {
   background: #05080e;
+}
+
+.social-icon.x .social-mark {
   font-size: 1.35rem;
 }
 
@@ -1210,7 +1217,7 @@ ul {
   padding: 0;
 }
 
-.social-icon.hudl img {
+.social-icon.hudl .social-mark {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2032,12 +2039,46 @@ footer img {
   }
 
   .social-links {
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.7rem;
+    justify-content: stretch;
   }
 
   .social-icon {
-    width: 54px;
-    height: 54px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    min-height: 96px;
+    gap: 0.55rem;
+    padding: 0.7rem 0.35rem;
+    border-radius: 14px;
+  }
+
+  .social-icon.instagram .social-mark {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-icon.x .social-mark {
+    line-height: 1;
+  }
+
+  .social-icon.hudl .social-mark {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+  }
+
+  .social-name {
+    display: block;
+    color: var(--white);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    text-transform: uppercase;
   }
 
   .stat-table div,
