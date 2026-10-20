@@ -23,6 +23,12 @@
       opponent: "Charleston Catholic",
       details: "1:00 PM @ Capital High School",
       date: "2026-10-17T13:00:00-04:00"
+    },
+    {
+      title: "at Princeton Tigers",
+      opponent: "Princeton Tigers",
+      details: "7:00 PM @ Princeton (Away)",
+      date: "2026-10-20T19:00:00-04:00"
     }
   ];
 
