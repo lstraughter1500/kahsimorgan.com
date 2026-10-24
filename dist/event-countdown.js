@@ -2,35 +2,48 @@
   const events = [
     {
       title: "vs Cabell Midland",
+      sport: "soccer",
       opponent: "Cabell Midland",
       details: "8:15 PM @ Capital High School",
       date: "2026-10-08T20:15:00-04:00"
     },
     {
       title: "vs Nicholas County",
+      sport: "soccer",
       opponent: "Nicholas County",
       details: "1:00 PM @ Capital High School",
       date: "2026-10-10T13:00:00-04:00"
     },
     {
       title: "vs PikeView",
+      sport: "soccer",
       opponent: "PikeView",
       details: "8:00 PM @ Capital High School",
       date: "2026-10-13T20:00:00-04:00"
     },
     {
       title: "vs Charleston Catholic",
+      sport: "soccer",
       opponent: "Charleston Catholic",
       details: "1:00 PM @ Capital High School",
       date: "2026-10-17T13:00:00-04:00"
     },
     {
       title: "at Princeton Tigers",
+      sport: "soccer",
       opponent: "Princeton Tigers",
       details: "7:00 PM @ Princeton (Away)",
       date: "2026-10-20T19:00:00-04:00"
     }
   ];
+
+  // Add basketball fixtures here with title, opponent, details, and an ISO date
+  // including the Eastern time offset (-05:00 in winter, -04:00 in summer).
+  const basketballEvents = [];
+  basketballEvents.forEach((event) => events.push({ ...event, sport: "basketball" }));
+  events.sort((a, b) => new Date(a.date) - new Date(b.date));
+  const firstBasketballEvent = events.find((event) => event.sport === "basketball");
+  const countdownLeadTime = 14 * 24 * 60 * 60 * 1000;
 
   const showtimeDuration = 90 * 60 * 1000;
   const section = document.querySelector(".countdown-section");
@@ -54,6 +67,19 @@
     seconds.textContent = format(secondCount);
   };
 
+  const loadingPanel = document.querySelector("[data-season-loading]");
+  const clock = document.querySelector(".countdown-clock");
+  const info = document.querySelector(".countdown-info");
+  const loadingStatus = document.querySelector("[data-season-status]");
+
+  const setLoading = (loading) => {
+    section?.classList.toggle("is-season-loading", loading);
+    section?.setAttribute("aria-label", loading ? "Basketball season preview" : "Next game countdown");
+    if (loadingPanel) loadingPanel.hidden = !loading;
+    if (clock) clock.hidden = loading;
+    if (info) info.hidden = loading;
+  };
+
   const updateCountdown = () => {
     const now = Date.now();
     const activeEvent = events.find((event) => {
@@ -62,6 +88,7 @@
     });
 
     if (activeEvent) {
+      setLoading(false);
       section?.classList.add("is-showtime");
       title.textContent = activeEvent.title;
       details.textContent = activeEvent.details;
@@ -73,6 +100,21 @@
 
     const nextEvent = events.find((event) => new Date(event.date).getTime() > now);
 
+    // Once the season begins, keep counting down to subsequent games.
+    const waitingForBasketball = !firstBasketballEvent ||
+      now < new Date(firstBasketballEvent.date).getTime() - countdownLeadTime;
+    if (waitingForBasketball && (!nextEvent || nextEvent.sport === "basketball")) {
+      setLoading(true);
+      if (loadingStatus) {
+        loadingStatus.textContent = firstBasketballEvent
+          ? "Schedule set. Countdown begins 14 days before tip-off."
+          : "Schedule coming soon.";
+      }
+      setClock(0, 0, 0, 0);
+      return;
+    }
+
+    setLoading(false);
     if (!nextEvent) {
       title.textContent = "Schedule Complete";
       details.textContent = "New events will be posted soon.";

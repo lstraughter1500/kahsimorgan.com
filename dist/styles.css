@@ -2166,3 +2166,73 @@ footer img {
     display: none;
   }
 }
+
+
+/* Between seasons: replaces the clock until basketball is 14 days away. */
+.countdown-section [hidden] { display: none !important; }
+.countdown-section.is-season-loading { background: #09162c; }
+.season-loading {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: clamp(1.5rem, 3vw, 2.6rem);
+  color: #fff;
+  border-top: 3px solid #2d5ce3;
+  background: radial-gradient(ellipse at top right, #203e79 0%, transparent 65%);
+}
+.season-eyebrow, .season-status {
+  font-family: Arial, sans-serif;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #b6cbff;
+}
+.season-loading h2 {
+  margin: .55rem 0 .6rem;
+  font-size: clamp(2rem, 3.7vw, 3.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+.season-loading h2 span { color: #88aaff; }
+.season-loading p {
+  margin: 0;
+  font: 400 .9rem/1.5 Arial, sans-serif;
+  color: #d4ddef;
+}
+.season-loading-status { width: min(100%, 300px); flex-shrink: 0; }
+.season-status { display: block; line-height: 1.6; letter-spacing: .06em; }
+.season-loading-track {
+  height: 5px;
+  margin: .85rem 0 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #ffffff20;
+}
+.season-loading-track span {
+  display: block;
+  width: 45%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #2857d8, #91b6ff);
+  animation: seasonLoading 2.8s ease-in-out infinite alternate;
+}
+.season-loading-status a {
+  color: #fff;
+  font: 700 .8rem/1.5 Arial, sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@keyframes seasonLoading {
+  from { transform: translateX(-30%); }
+  to { transform: translateX(150%); }
+}
+@media (max-width: 760px) {
+  .season-loading { flex-direction: column; align-items: flex-start; gap: 1.4rem; }
+  .season-loading-status { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .season-loading-track span { animation: none; }
+}
