@@ -7,7 +7,7 @@
     const closeButton = section.querySelector('[data-highlights-close]');
     if (!gallery || !dialog || !allGallery || !openButton || !closeButton) return;
 
-    // Add new video figures to data-highlight-gallery; both views use that collection.
+    // sport-media.js supplies each category from the shared sport collection.
     const clips = Array.from(gallery.querySelectorAll('figure'));
     clips.forEach((clip, index) => {
       clip.querySelector('video')?.setAttribute('aria-label', `${section.dataset.filmLabel} ${index + 1}`);
