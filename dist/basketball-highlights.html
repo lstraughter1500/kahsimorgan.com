@@ -59,23 +59,46 @@
         <button class="button secondary gallery-view-all" type="button" data-gallery-show-all hidden>View All Images</button>
       </section>
 
-      <section class="sport-detail-section media-section">
+      <section class="sport-detail-section media-section" data-highlight-section data-film-label="Game film" id="game-film">
         <div class="section-heading">
-          <p>Basketball Film</p>
-          <h2>Highlight Videos</h2>
+          <p>Basketball Highlights</p>
+          <h2>Game Film</h2>
         </div>
         <div class="highlight-video-grid" data-highlight-gallery>
-        <figure class="basketball-highlight-video">
-          <video controls playsinline preload="none" poster="assets/basketball-highlights-poster.jpg" aria-label="Kahsi Morgan basketball highlight video">
-            <source src="assets/basketball-highlights.mp4" type="video/mp4">
-            Your browser does not support embedded video. <a href="assets/basketball-highlights.mp4">Watch the basketball highlight video</a>.
-          </video>
-        </figure>
+          <figure class="basketball-highlight-video">
+            <video controls playsinline preload="none" poster="assets/basketball-highlights-poster.jpg" aria-label="Kahsi Morgan basketball game film">
+              <source src="assets/basketball-highlights.mp4" type="video/mp4">
+              Your browser does not support embedded video. <a href="assets/basketball-highlights.mp4">Watch the basketball highlight video</a>.
+            </video>
+          </figure>
         </div>
-        <button class="button secondary gallery-view-all" type="button" data-highlights-show-all aria-haspopup="dialog">View All Highlights</button>
-        <dialog class="highlights-dialog" aria-labelledby="all-highlights-title">
+        <button class="button secondary gallery-view-all" type="button" data-highlights-show-all aria-haspopup="dialog">View All Game Film</button>
+        <dialog class="highlights-dialog" aria-labelledby="all-game-film-title">
           <div class="highlights-dialog-header">
-            <h2 id="all-highlights-title">All Basketball Highlights</h2>
+            <h2 id="all-game-film-title">All Game Film</h2>
+            <button class="button secondary" type="button" data-highlights-close autofocus>Close</button>
+          </div>
+          <div class="highlight-video-grid" data-all-highlights></div>
+        </dialog>
+      </section>
+
+      <section class="sport-detail-section media-section" data-highlight-section data-film-label="Skills film" id="skills-film">
+        <div class="section-heading">
+          <p>Basketball Highlights</p>
+          <h2>Skills Film</h2>
+        </div>
+        <div class="highlight-video-grid" data-highlight-gallery>
+          <figure class="basketball-highlight-video">
+            <video controls playsinline preload="none" poster="assets/basketball-skills-film-poster.jpg" aria-label="Kahsi Morgan basketball skills film">
+              <source src="assets/basketball-skills-film.mp4" type="video/mp4">
+              Your browser does not support embedded video. <a href="assets/basketball-skills-film.mp4">Watch the basketball skills film</a>.
+            </video>
+          </figure>
+        </div>
+        <button class="button secondary gallery-view-all" type="button" data-highlights-show-all aria-haspopup="dialog">View All Skills Film</button>
+        <dialog class="highlights-dialog" aria-labelledby="all-skills-film-title">
+          <div class="highlights-dialog-header">
+            <h2 id="all-skills-film-title">All Skills Film</h2>
             <button class="button secondary" type="button" data-highlights-close autofocus>Close</button>
           </div>
           <div class="highlight-video-grid" data-all-highlights></div>
