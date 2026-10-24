@@ -64,6 +64,22 @@
           <p>Basketball Film</p>
           <h2>Highlight Videos</h2>
         </div>
+        <div class="highlight-video-grid" data-highlight-gallery>
+        <figure class="basketball-highlight-video">
+          <video controls playsinline preload="none" poster="assets/basketball-highlights-poster.jpg" aria-label="Kahsi Morgan basketball highlight video">
+            <source src="assets/basketball-highlights.mp4" type="video/mp4">
+            Your browser does not support embedded video. <a href="assets/basketball-highlights.mp4">Watch the basketball highlight video</a>.
+          </video>
+        </figure>
+        </div>
+        <button class="button secondary gallery-view-all" type="button" data-highlights-show-all aria-haspopup="dialog">View All Highlights</button>
+        <dialog class="highlights-dialog" aria-labelledby="all-highlights-title">
+          <div class="highlights-dialog-header">
+            <h2 id="all-highlights-title">All Basketball Highlights</h2>
+            <button class="button secondary" type="button" data-highlights-close autofocus>Close</button>
+          </div>
+          <div class="highlight-video-grid" data-all-highlights></div>
+        </dialog>
         <div class="video-link-grid">
           <a class="video-link-card" href="http://www.hudl.com/profile/24947935" target="_blank" rel="noopener">
             <span class="social-icon hudl"><img src="assets/hudl-logo.png" alt=""></span>
@@ -79,5 +95,6 @@
       <div><strong>Kahsi Morgan Recruiting</strong><span>Class of 2028 // Dual-Sport Athlete</span></div>
     </footer>
     <script src="media-gallery.js"></script>
+    <script src="highlight-videos.js"></script>
   </body>
 </html>
