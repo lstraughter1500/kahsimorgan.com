@@ -2279,3 +2279,24 @@ footer img {
 }
 .highlights-dialog-header h2 { margin: 0; font-size: clamp(1.5rem, 4vw, 2.5rem); }
 body.highlights-dialog-open { overflow: hidden; }
+
+
+.coach-reference blockquote {
+  margin: 1.1rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--blue);
+  color: var(--navy);
+  font: italic 400 1rem/1.65 Arial, sans-serif;
+}
+.coach-reference .reference-letter {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  font-size: .95rem;
+}
+.coach-reference .reference-contact {
+  margin-top: 1rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.reference-contact a { color: #00399f; text-underline-offset: 3px; }
