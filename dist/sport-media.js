@@ -82,7 +82,26 @@
       {
         "id": "game-film",
         "title": "Game Film",
-        "clips": []
+        "clips": [
+          {
+            "src": "assets/soccer-three-goal-game-1.mp4",
+            "poster": "assets/soccer-three-goal-game-1-poster.jpg",
+            "title": "Three-Goal Game — Clip 1",
+            "caption": "Game action from Kahsi Morgan’s three-goal performance in a soccer win."
+          },
+          {
+            "src": "assets/soccer-three-goal-game-2.mp4",
+            "poster": "assets/soccer-three-goal-game-2-poster.jpg",
+            "title": "Three-Goal Game — Clip 2",
+            "caption": "Game action from Kahsi Morgan’s three-goal performance in a soccer win."
+          },
+          {
+            "src": "assets/soccer-three-goal-game-3.mp4",
+            "poster": "assets/soccer-three-goal-game-3-poster.jpg",
+            "title": "Three-Goal Game — Clip 3",
+            "caption": "Game action from Kahsi Morgan’s three-goal performance in a soccer win."
+          }
+        ]
       },
       {
         "id": "skills-film",
@@ -246,6 +265,30 @@
           {
             "src": "assets/basketball-skills-film.mp4",
             "poster": "assets/basketball-skills-film-poster.jpg"
+          },
+          {
+            "src": "assets/basketball-night-skills-1.mp4",
+            "poster": "assets/basketball-night-skills-1-poster.jpg",
+            "title": "Late-Night Skills Work — Clip 1",
+            "caption": "Basketball training focused on balance, tough shot making, and ball handling under pressure."
+          },
+          {
+            "src": "assets/basketball-night-skills-2.mp4",
+            "poster": "assets/basketball-night-skills-2-poster.jpg",
+            "title": "Late-Night Skills Work — Clip 2",
+            "caption": "Basketball training focused on balance, tough shot making, and ball handling under pressure."
+          },
+          {
+            "src": "assets/basketball-night-skills-3.mp4",
+            "poster": "assets/basketball-night-skills-3-poster.jpg",
+            "title": "Late-Night Skills Work — Clip 3",
+            "caption": "Basketball training focused on balance, tough shot making, and ball handling under pressure."
+          },
+          {
+            "src": "assets/basketball-night-skills-4.mp4",
+            "poster": "assets/basketball-night-skills-4-poster.jpg",
+            "title": "Late-Night Skills Work — Clip 4",
+            "caption": "Basketball training focused on balance, tough shot making, and ball handling under pressure."
           }
         ]
       }
