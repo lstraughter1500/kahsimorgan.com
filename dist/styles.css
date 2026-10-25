@@ -2300,3 +2300,29 @@ body.highlights-dialog-open { overflow: hidden; }
   overflow-wrap: anywhere;
 }
 .reference-contact a { color: #00399f; text-underline-offset: 3px; }
+
+
+.recognition-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1rem 1.2rem 1.25rem;
+}
+.recognition-grid article {
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--blue);
+  border-radius: 6px;
+  background: #f6f9ff;
+}
+.recognition-grid span {
+  display: block;
+  margin-bottom: .75rem;
+  color: #38557e;
+  font: 800 .75rem/1.4 Arial, sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.recognition-grid h3 { font-size: 1.1rem; line-height: 1.3; }
+.recognition-grid p { margin: .5rem 0 0; color: var(--navy); font: 700 .95rem/1.5 Arial, sans-serif; }
+@media (max-width: 760px) { .recognition-grid { grid-template-columns: 1fr; } }
