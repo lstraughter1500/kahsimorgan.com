@@ -10,7 +10,10 @@
     // sport-media.js supplies each category from the shared sport collection.
     const clips = Array.from(gallery.querySelectorAll('figure'));
     clips.forEach((clip, index) => {
-      clip.querySelector('video')?.setAttribute('aria-label', `${section.dataset.filmLabel} ${index + 1}`);
+      const video = clip.querySelector('video');
+      if (video && !clip.querySelector('figcaption')) {
+        video.setAttribute('aria-label', `${section.dataset.filmLabel} ${index + 1}`);
+      }
     });
     const shuffled = [...clips];
     for (let index = shuffled.length - 1; index > 0; index -= 1) {

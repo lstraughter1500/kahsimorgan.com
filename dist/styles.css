@@ -2253,6 +2253,15 @@ footer img {
   background: #050b15;
 }
 
+.basketball-highlight-video figcaption {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1rem 1.1rem;
+  color: #fff;
+}
+.basketball-highlight-video figcaption strong { font-size: 1rem; }
+.basketball-highlight-video figcaption span { font-size: 0.88rem; line-height: 1.5; }
+
 .highlight-video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));

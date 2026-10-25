@@ -200,6 +200,36 @@
           {
             "src": "assets/basketball-game-film-2.mp4",
             "poster": "assets/basketball-game-film-2-poster.jpg"
+          },
+          {
+            "src": "assets/basketball-season-highlights-1.mp4",
+            "poster": "assets/basketball-season-highlights-1-poster.jpg",
+            "title": "Full Season Highlights — Part 1",
+            "caption": "Kahsi Morgan’s season highlights: scoring, ball handling, and defense."
+          },
+          {
+            "src": "assets/basketball-season-highlights-2.mp4",
+            "poster": "assets/basketball-season-highlights-2-poster.jpg",
+            "title": "Full Season Highlights — Part 2",
+            "caption": "More season highlights featuring Kahsi Morgan’s scoring, ball handling, and defense."
+          },
+          {
+            "src": "assets/basketball-first-win.mp4",
+            "poster": "assets/basketball-first-win-poster.jpg",
+            "title": "First Win of the Season",
+            "caption": "Game MVP performance: 9 points, 8 assists, and 5 rebounds in a team win."
+          },
+          {
+            "src": "assets/basketball-midseason-1.mp4",
+            "poster": "assets/basketball-midseason-1-poster.jpg",
+            "title": "Midseason Highlights — Part 1",
+            "caption": "Kahsi Morgan’s game highlights from the first half of the season."
+          },
+          {
+            "src": "assets/basketball-midseason-2.mp4",
+            "poster": "assets/basketball-midseason-2-poster.jpg",
+            "title": "Midseason Highlights — Part 2",
+            "caption": "More game action from Kahsi Morgan’s midseason highlight collection."
           }
         ]
       },
@@ -245,10 +275,11 @@
           <div class="highlight-video-grid" data-highlight-gallery>
             ${film.clips.map((clip) => `
               <figure class="basketball-highlight-video">
-                <video controls playsinline preload="none" poster="${escapeHTML(clip.poster)}" aria-label="${escapeHTML(collection.label + ' ' + film.title)}">
+                <video controls playsinline preload="none" poster="${escapeHTML(clip.poster)}" aria-label="${escapeHTML(clip.title || collection.label + ' ' + film.title)}">
                   <source src="${escapeHTML(clip.src)}" type="video/mp4">
                   Your browser does not support embedded video. <a href="${escapeHTML(clip.src)}">Watch the video</a>.
                 </video>
+                ${clip.title || clip.caption ? `<figcaption>${clip.title ? `<strong>${escapeHTML(clip.title)}</strong>` : ''}${clip.caption ? `<span>${escapeHTML(clip.caption)}</span>` : ''}</figcaption>` : ''}
               </figure>
             `).join('')}
           </div>
