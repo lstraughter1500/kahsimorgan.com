@@ -230,6 +230,12 @@
             "poster": "assets/basketball-midseason-2-poster.jpg",
             "title": "Midseason Highlights — Part 2",
             "caption": "More game action from Kahsi Morgan’s midseason highlight collection."
+          },
+          {
+            "src": "assets/basketball-greenbrier-east.mp4",
+            "poster": "assets/basketball-greenbrier-east-poster.jpg",
+            "title": "17 Points vs. Greenbrier East",
+            "caption": "Kahsi Morgan scores 17 points in an elimination game against Greenbrier East."
           }
         ]
       },
