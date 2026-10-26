@@ -1,6 +1,7 @@
 (() => {
-  // Add partners here once; both sport highlights pages share this section.
+  // Add partners here once; both sport profiles and highlights pages share this section.
   const partners = [
+    { name: 'Haus Media', logo: 'assets/media-partners/haus-media.png' },
     { name: 'Hurricane Media', logo: 'assets/media-partners/hurricane-media.png' },
     { name: "Le'quan Lee Photography", logo: 'assets/media-partners/lequan-lee-photography.png' },
     { name: 'Petersen Photography', logo: 'assets/media-partners/petersen-photography.png' },
