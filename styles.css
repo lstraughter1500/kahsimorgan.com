@@ -2537,3 +2537,21 @@ body.thanks-dialog-open { overflow: hidden; }
   .thanks-track { animation: none; }
   .thanks-motion { display: none; }
 }
+
+
+.about-long-bio { align-items: start; }
+.about-long-bio .section-heading { padding-bottom: 1.2rem; }
+.about-long-bio .section-heading p { padding: 0; font-size: .75rem; }
+.about-long-bio .section-heading h2 { font-size: clamp(1.8rem,3vw,2.7rem); line-height: 1.1; }
+.bio-copy { padding: 0 1.2rem .6rem; }
+.about-card .bio-copy p { padding: 0 0 1.1rem; font-weight: 400; line-height: 1.8; }
+.bio-copy strong { font-weight: 700; }
+.about-card .bio-motto { color: var(--blue); }
+.bio-copy h3 { margin: 1rem 0 .8rem; color: var(--navy); font-size: 1.6rem; font-weight: 400; }
+.about-long-bio .about-photo { position: sticky; top: 115px; }
+.about-long-bio .about-photo img { display: block; height: auto; min-height: 0; }
+@media(max-width:760px) {
+  .about-long-bio .about-photo { position: static; order: -1; }
+  .about-long-bio .about-photo img { height: 390px; object-fit: cover; }
+  .about-card .bio-copy p { font-size: 1rem; }
+}
