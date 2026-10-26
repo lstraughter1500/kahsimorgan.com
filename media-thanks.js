@@ -1,12 +1,12 @@
 (() => {
   // Add partners here once; both sport profiles and highlights pages share this section.
   const partners = [
-    { name: 'Haus Media', logo: 'assets/media-partners/haus-media.png' },
-    { name: 'Hurricane Media', logo: 'assets/media-partners/hurricane-media.png' },
-    { name: "Le'quan Lee Photography", logo: 'assets/media-partners/lequan-lee-photography.png' },
-    { name: 'Petersen Photography', logo: 'assets/media-partners/petersen-photography.png' },
-    { name: "Steve's Sports", logo: 'assets/media-partners/steves-sports.png' },
-    { name: 'Treehouse Photography', logo: 'assets/media-partners/treehouse-photography.png' }
+    { name: 'Haus Media', logo: 'assets/media-partners/haus-media.png', url: 'https://www.facebook.com/share/1DWEiRPz4A/?mibextid=wwXIfr' },
+    { name: 'Hurricane Media', logo: 'assets/media-partners/hurricane-media.png', url: 'https://www.facebook.com/share/1FSC4wUxdm/?mibextid=wwXIfr' },
+    { name: "Le'quan Lee Photography", logo: 'assets/media-partners/lequan-lee-photography.png', url: 'https://www.facebook.com/share/19Hh1xZXpj/?mibextid=wwXIfr' },
+    { name: 'Petersen Photography', logo: 'assets/media-partners/petersen-photography.png', url: 'https://www.facebook.com/share/1Bp5yGcCfn/?mibextid=wwXIfr' },
+    { name: "Steve's Sports", logo: 'assets/media-partners/steves-sports.png', url: 'https://www.facebook.com/share/1Ges1Tzymb/?mibextid=wwXIfr' },
+    { name: 'Treehouse Photography', logo: 'assets/media-partners/treehouse-photography.png', url: 'https://www.facebook.com/share/19vqSXzGYs/?mibextid=wwXIfr' }
   ];
   // Keep the carousel and popup alphabetical as new partners are added.
   partners.sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
@@ -15,7 +15,12 @@
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   })[char]);
 
-  const partnerCard = (partner) => `
+  const partnerCard = (partner) => partner.url ? `
+    <a class="thanks-partner thanks-partner-link" href="${escapeHTML(partner.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHTML(partner.name)} Facebook page (opens in a new tab)">
+      <span class="thanks-logo"><img src="${escapeHTML(partner.logo)}" alt="" loading="lazy"></span>
+      <span class="thanks-partner-name">${escapeHTML(partner.name)}</span>
+    </a>
+  ` : `
     <figure class="thanks-partner">
       <div class="thanks-logo"><img src="${escapeHTML(partner.logo)}" alt="" loading="lazy"></div>
       <figcaption>${escapeHTML(partner.name)}</figcaption>

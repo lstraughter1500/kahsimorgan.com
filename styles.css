@@ -2555,3 +2555,8 @@ body.thanks-dialog-open { overflow: hidden; }
   .about-long-bio .about-photo img { height: 390px; object-fit: cover; }
   .about-card .bio-copy p { font-size: 1rem; }
 }
+
+.thanks-partner-link { display: block; text-decoration: none; }
+.thanks-partner-link:hover { box-shadow: 0 0 0 2px var(--blue); }
+.thanks-partner-link:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.thanks-partner-link .thanks-partner-name::after { content: " ↗"; color: var(--blue); }
