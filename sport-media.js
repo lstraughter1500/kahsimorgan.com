@@ -255,6 +255,48 @@
             "poster": "assets/basketball-greenbrier-east-poster.jpg",
             "title": "17 Points vs. Greenbrier East",
             "caption": "Kahsi Morgan scores 17 points in an elimination game against Greenbrier East."
+          },
+          {
+            "src": "assets/basketball-mylan-bridgeport-1.mp4",
+            "poster": "assets/basketball-mylan-bridgeport-1-poster.jpg",
+            "title": "Mylan Park & Bridgeport — Clip 1",
+            "caption": "From Kahsi Morgan’s Mylan Park and Bridgeport game film collection."
+          },
+          {
+            "src": "assets/basketball-mylan-bridgeport-2.mp4",
+            "poster": "assets/basketball-mylan-bridgeport-2-poster.jpg",
+            "title": "Mylan Park & Bridgeport — Clip 2",
+            "caption": "From Kahsi Morgan’s Mylan Park and Bridgeport game film collection."
+          },
+          {
+            "src": "assets/basketball-mylan-bridgeport-3.mp4",
+            "poster": "assets/basketball-mylan-bridgeport-3-poster.jpg",
+            "title": "Mylan Park & Bridgeport — Clip 3",
+            "caption": "From Kahsi Morgan’s Mylan Park and Bridgeport game film collection."
+          },
+          {
+            "src": "assets/basketball-mylan-bridgeport-4.mp4",
+            "poster": "assets/basketball-mylan-bridgeport-4-poster.jpg",
+            "title": "Mylan Park & Bridgeport — Clip 4",
+            "caption": "From Kahsi Morgan’s Mylan Park and Bridgeport game film collection."
+          },
+          {
+            "src": "assets/basketball-mylan-bridgeport-5.mp4",
+            "poster": "assets/basketball-mylan-bridgeport-5-poster.jpg",
+            "title": "Mylan Park & Bridgeport — Clip 5",
+            "caption": "From Kahsi Morgan’s Mylan Park and Bridgeport game film collection."
+          },
+          {
+            "src": "assets/basketball-mylan-bridgeport-6.mp4",
+            "poster": "assets/basketball-mylan-bridgeport-6-poster.jpg",
+            "title": "Mylan Park & Bridgeport — Clip 6",
+            "caption": "From Kahsi Morgan’s Mylan Park and Bridgeport game film collection."
+          },
+          {
+            "src": "assets/basketball-mylan-bridgeport-7.mp4",
+            "poster": "assets/basketball-mylan-bridgeport-7-poster.jpg",
+            "title": "Mylan Park & Bridgeport — Clip 7",
+            "caption": "From Kahsi Morgan’s Mylan Park and Bridgeport game film collection."
           }
         ]
       },
