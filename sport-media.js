@@ -257,6 +257,34 @@
       {
         "src": "assets/basketball-pizzo-capital-sideline-shot.jpg",
         "alt": "Kahsi Morgan shooting near the Capital bench"
+      },
+      {
+        "src": "assets/basketball-st-albans-shot-follow-through.jpg",
+        "alt": "Kahsi Morgan following through on a jump shot against St. Albans"
+      },
+      {
+        "src": "assets/basketball-st-albans-contested-jumper.jpg",
+        "alt": "Kahsi Morgan releasing a contested jump shot against St. Albans"
+      },
+      {
+        "src": "assets/basketball-st-albans-bringing-ball-up.jpg",
+        "alt": "Kahsi Morgan bringing the basketball up court against St. Albans"
+      },
+      {
+        "src": "assets/basketball-st-albans-basket-finish.jpg",
+        "alt": "Kahsi Morgan attempting a finish at the basket against St. Albans"
+      },
+      {
+        "src": "assets/basketball-st-albans-court-vision.jpg",
+        "alt": "Kahsi Morgan surveying a St. Albans defender with the basketball"
+      },
+      {
+        "src": "assets/basketball-st-albans-drive-between-defenders.jpg",
+        "alt": "Kahsi Morgan driving between two St. Albans defenders"
+      },
+      {
+        "src": "assets/basketball-st-albans-sideline-jumper.jpg",
+        "alt": "Kahsi Morgan shooting over a St. Albans defender near the sideline"
       }
     ],
     "films": [
