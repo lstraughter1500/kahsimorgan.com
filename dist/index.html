@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kahsi Morgan Recruiting Profile</title>
     <meta name="description" content="Dual-sport recruiting profile for Kahsi Morgan, soccer and basketball student athlete.">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261027-connect-contact">
   </head>
   <body>
     <div class="intro-overlay" data-intro-overlay aria-hidden="true">
@@ -191,7 +191,7 @@
         </a>
       </section>
 
-      <section class="split-section" id="academics">
+      <section class="split-section single-split" id="academics">
         <article class="academics-panel">
           <div class="section-heading">
             <p>Academics & Honors</p>
@@ -221,31 +221,35 @@
           </div>
         </article>
 
-        <article class="contact-panel" id="contact">
-          <div class="section-heading">
-            <p>Recruiting Contact</p>
-            <h2>Reach Kahsi</h2>
+
+      </section>
+
+      <section class="social-connect" id="contact" aria-labelledby="social-connect-title">
+        <p class="social-connect-eyebrow">Connect with Kahsi</p>
+        <h2 id="social-connect-title">Follow the Journey</h2>
+        <p class="social-connect-description">Game highlights, athletic updates, and a closer look at Kahsi Morgan.</p>
+        <div class="social-connect-grid">
+          <a class="social-connect-card" href="http://www.hudl.com/profile/24947935" target="_blank" rel="noopener noreferrer" aria-label="Watch Kahsi Morgan’s film on Hudl (opens in a new tab)">
+            <span class="social-connect-icon"><img src="assets/social/hudl.svg" alt="" width="30" height="30"></span>
+            <strong>Hudl</strong><span class="social-connect-action">Watch Film <span aria-hidden="true">↗</span></span>
+          </a>
+          <a class="social-connect-card" href="https://www.instagram.com/kahsimorgan" target="_blank" rel="noopener noreferrer" aria-label="Follow Kahsi Morgan on Instagram (opens in a new tab)">
+            <span class="social-connect-icon"><img src="assets/social/instagram.svg" alt="" width="28" height="28"></span>
+            <strong>Instagram</strong><span class="social-connect-action">Follow <span aria-hidden="true">↗</span></span>
+          </a>
+          <a class="social-connect-card" href="https://x.com/kahsi_3" target="_blank" rel="noopener noreferrer" aria-label="Connect with Kahsi Morgan on X (opens in a new tab)">
+            <span class="social-connect-icon"><img src="assets/social/x.svg" alt="" width="26" height="26"></span>
+            <strong>X</strong><span class="social-connect-action">Connect <span aria-hidden="true">↗</span></span>
+          </a>
+        </div>
+        <div class="social-connect-reach">
+          <div>
+            <p class="social-connect-eyebrow">Recruiting Contact</p>
+            <h3>Reach Kahsi</h3>
+            <p class="social-connect-location">Charleston, WV</p>
           </div>
-          <div class="contact-actions">
-            <button type="button" class="button primary request-contact-button" data-open-contact-form>Request to Contact</button>
-          </div>
-          <dl class="contact-list">
-            <div>
-              <dt>Social Media</dt>
-              <dd>
-                <div class="social-links" aria-label="Kahsi Morgan social links">
-                  <a class="social-icon instagram" href="https://www.instagram.com/kahsimorgan" target="_blank" rel="noopener" aria-label="Instagram: kahsimorgan"><span class="social-mark"></span><span class="social-name">Instagram</span></a>
-                  <a class="social-icon x" href="https://x.com/kahsi_3" target="_blank" rel="noopener" aria-label="X: kahsi_3"><img class="social-mark" src="assets/x-logo.jpg" alt=""><span class="social-name">X</span></a>
-                  <a class="social-icon hudl" href="http://www.hudl.com/profile/24947935" target="_blank" rel="noopener" aria-label="HUDL profile"><img class="social-mark" src="assets/hudl-logo.png" alt=""><span class="social-name">Hudl</span></a>
-                </div>
-              </dd>
-            </div>
-            <div>
-              <dt>Location</dt>
-              <dd>Charleston, WV</dd>
-            </div>
-          </dl>
-        </article>
+          <button type="button" class="button primary social-connect-contact" data-open-contact-form>Contact Kahsi</button>
+        </div>
       </section>
 
       <section class="events-section" aria-label="Upcoming events">
@@ -350,46 +354,24 @@
     <dialog class="contact-dialog" id="requestContactDialog" aria-labelledby="requestContactTitle">
       <form class="request-form" method="dialog">
         <div class="dialog-heading">
-          <h2 id="requestContactTitle">Request to Contact</h2>
+          <h2 id="requestContactTitle">Contact Kahsi</h2>
           <button type="button" class="dialog-close" data-close-contact-form aria-label="Close contact form">Close</button>
         </div>
-        <label>
-          Name
-          <input name="name" type="text" autocomplete="name" required>
-        </label>
-        <label>
-          School
-          <input name="school" type="text" autocomplete="organization" required>
-        </label>
-        <label>
-          Sport
-          <select name="sport" required>
-            <option value="">Select sport</option>
-            <option>Soccer</option>
-            <option>Basketball</option>
-            <option>Both</option>
-          </select>
-        </label>
-        <label>
-          Role Within Program
-          <input name="role" type="text" placeholder="Coach, recruiter, assistant coach" required>
-        </label>
-        <label>
-          Phone Number
-          <input name="phone" type="tel" autocomplete="tel" required>
-        </label>
-        <label>
-          Email Address
-          <input name="email" type="email" autocomplete="email" required>
-        </label>
-        <label>
-          Message
-          <textarea name="message" rows="4" placeholder="Optional message"></textarea>
-        </label>
-        <button type="submit" class="button primary">Submit Request</button>
+        <label>Name<input name="name" type="text" autocomplete="name" required></label>
+        <label>School<input name="school" type="text" autocomplete="organization" required></label>
+        <label>Sport<select name="sport" required><option value="">Select sport</option><option>Soccer</option><option>Basketball</option><option>Both</option></select></label>
+        <label>Role Within Program<input name="role" type="text" placeholder="Coach, recruiter, assistant coach" required></label>
+        <label>Phone Number<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Email Address<input name="email" type="email" autocomplete="email" required></label>
+        <label>Message<textarea name="message" rows="4" placeholder="Optional message"></textarea></label>
+        <p id="contact-method-note">Choose text or email. Your message opens in your messaging or email app, ready for you to review and send.</p>
+        <div class="contact-method-actions" aria-describedby="contact-method-note">
+          <button type="submit" class="button primary" name="contact-method" value="text">Text Kahsi</button>
+          <button type="submit" class="button secondary" name="contact-method" value="email">Email Kahsi</button>
+        </div>
       </form>
     </dialog>
-    <script src="contact-form.js"></script>
+    <script src="contact-form.js?v=20261026-contact-options"></script>
     <script src="event-countdown.js"></script>
     <script src="media-tiles.js"></script>
     <script src="intro.js"></script>
