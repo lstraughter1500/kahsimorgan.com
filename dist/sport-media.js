@@ -205,6 +205,58 @@
       {
         "src": "assets/basketball-white-defense.jpg",
         "alt": "Kahsi Morgan defending an opponent in white Capital number 10 uniform"
+      },
+      {
+        "src": "assets/basketball-pizzo-capital-court-dribble.jpg",
+        "alt": "Kahsi Morgan dribbling in white Capital number 10 uniform at a home game"
+      },
+      {
+        "src": "assets/basketball-pizzo-midland-drive.jpg",
+        "alt": "Kahsi Morgan driving between Midland defenders in white Capital uniform"
+      },
+      {
+        "src": "assets/basketball-pizzo-midland-ball-control.jpg",
+        "alt": "Kahsi Morgan controlling the basketball against Midland"
+      },
+      {
+        "src": "assets/basketball-pizzo-midland-jump-shot.jpg",
+        "alt": "Kahsi Morgan taking a jump shot against Midland"
+      },
+      {
+        "src": "assets/basketball-pizzo-midland-advance.jpg",
+        "alt": "Kahsi Morgan moving up court against a Midland defender"
+      },
+      {
+        "src": "assets/basketball-pizzo-east-layup.jpg",
+        "alt": "Kahsi Morgan extending for a layup in black number 10 uniform against Greenbrier East"
+      },
+      {
+        "src": "assets/basketball-pizzo-capital-home-portrait.jpg",
+        "alt": "Kahsi Morgan on the home court in white Capital number 10 uniform"
+      },
+      {
+        "src": "assets/basketball-pizzo-wolves-court-position.jpg",
+        "alt": "Kahsi Morgan positioning on court against the Wolves"
+      },
+      {
+        "src": "assets/basketball-pizzo-capital-team-moment.jpg",
+        "alt": "Kahsi Morgan sharing a moment with teammates during a basketball game"
+      },
+      {
+        "src": "assets/basketball-pizzo-east-jumper.jpg",
+        "alt": "Kahsi Morgan releasing a jump shot against Greenbrier East"
+      },
+      {
+        "src": "assets/basketball-pizzo-east-contested-jumper.jpg",
+        "alt": "Kahsi Morgan shooting over a Greenbrier East defender"
+      },
+      {
+        "src": "assets/basketball-pizzo-wolves-layup.jpg",
+        "alt": "Kahsi Morgan attempting a layup against Wolves defenders"
+      },
+      {
+        "src": "assets/basketball-pizzo-capital-sideline-shot.jpg",
+        "alt": "Kahsi Morgan shooting near the Capital bench"
       }
     ],
     "films": [

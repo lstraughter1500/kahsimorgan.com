@@ -1,6 +1,7 @@
 (() => {
   // Add partners here once; both sport profiles and highlights pages share this section.
   const partners = [
+    { name: 'Pizzographyy', logo: 'assets/media-partners/pizzographyy.png', url: 'https://www.instagram.com/pizzographyy?psln=MWo1aTI2MmdybmUzcQ%3D%3D' },
     { name: 'Haus Media', logo: 'assets/media-partners/haus-media.png', url: 'https://www.facebook.com/share/1DWEiRPz4A/?mibextid=wwXIfr' },
     { name: 'Hurricane Media', logo: 'assets/media-partners/hurricane-media.png', url: 'https://www.facebook.com/share/1FSC4wUxdm/?mibextid=wwXIfr' },
     { name: "Le'quan Lee Photography", logo: 'assets/media-partners/lequan-lee-photography.png', url: 'https://www.facebook.com/share/19Hh1xZXpj/?mibextid=wwXIfr' },
@@ -16,7 +17,7 @@
   })[char]);
 
   const partnerCard = (partner) => partner.url ? `
-    <a class="thanks-partner thanks-partner-link" href="${escapeHTML(partner.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHTML(partner.name)} Facebook page (opens in a new tab)">
+    <a class="thanks-partner thanks-partner-link" href="${escapeHTML(partner.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHTML(partner.name)} ${partner.url.includes('instagram.com/') ? 'Instagram' : 'Facebook'} page (opens in a new tab)">
       <span class="thanks-logo"><img src="${escapeHTML(partner.logo)}" alt="" loading="lazy"></span>
       <span class="thanks-partner-name">${escapeHTML(partner.name)}</span>
     </a>
