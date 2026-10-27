@@ -49,7 +49,7 @@
         <article class="contact-panel">
           <div class="section-heading"><p>Recruiting Contact</p><h2>Reach Kahsi</h2></div>
           <div class="contact-actions">
-            <button type="button" class="button primary request-contact-button" data-open-contact-form>Request to Contact</button>
+            <button type="button" class="button primary request-contact-button" data-open-contact-form>Contact Kahsi</button>
           </div>
           <dl class="contact-list">
             <div>
@@ -89,7 +89,7 @@
     <dialog class="contact-dialog" id="requestContactDialog" aria-labelledby="requestContactTitle">
       <form class="request-form" method="dialog">
         <div class="dialog-heading">
-          <h2 id="requestContactTitle">Request to Contact</h2>
+          <h2 id="requestContactTitle">Contact Kahsi</h2>
           <button type="button" class="dialog-close" data-close-contact-form aria-label="Close contact form">Close</button>
         </div>
         <label>Name<input name="name" type="text" autocomplete="name" required></label>
@@ -99,9 +99,10 @@
         <label>Phone Number<input name="phone" type="tel" autocomplete="tel" required></label>
         <label>Email Address<input name="email" type="email" autocomplete="email" required></label>
         <label>Message<textarea name="message" rows="4" placeholder="Optional message"></textarea></label>
-        <button type="submit" class="button primary">Submit Request</button>
+        <p id="text-request-note">Opens your texting app with your message ready to send. You’ll tap Send there. A device with text messaging is required.</p>
+        <button type="submit" class="button primary" aria-describedby="text-request-note">Continue to Text</button>
       </form>
     </dialog>
-    <script src="contact-form.js"></script>
+    <script src="contact-form.js?v=20261026-text-requests"></script>
   </body>
 </html>

@@ -46,10 +46,12 @@
       lines.push("", "Message:", message);
     }
 
-    const subject = encodeURIComponent("Kahsi Morgan recruiting contact request");
     const body = encodeURIComponent(lines.join("\n"));
-    window.location.href = `mailto:skmorgan05@hotmail.com?subject=${subject}&body=${body}`;
-    dialog.close();
-    event.currentTarget.reset();
+    // iOS Messages uses &body; other SMS handlers use ?body.
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    const separator = isIOS ? "&" : "?";
+    window.location.href = `sms:+13045399949${separator}body=${body}`;
+    // Keep the entered details available if the visitor cancels the text draft.
   });
 })();
