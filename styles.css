@@ -2561,5 +2561,6 @@ body.thanks-dialog-open { overflow: hidden; }
 .thanks-partner-link:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
 .thanks-partner-link .thanks-partner-name::after { content: " ↗"; color: var(--blue); }
 
-.contact-method-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
-.contact-method-actions .button { flex: 1 1 150px; }
+.contact-method-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+.contact-method-actions .button { min-width: 0; padding-inline: .5rem; }
+#contact-method-note { margin: 0; font: 400 .9rem/1.6 Arial, sans-serif; }
