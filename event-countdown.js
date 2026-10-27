@@ -37,9 +37,8 @@
     }
   ];
 
-  // Add basketball fixtures here with title, opponent, details, and an ISO date
-  // including the Eastern time offset (-05:00 in winter, -04:00 in summer).
-  const basketballEvents = [];
+  // The schedule and countdown share the basketball fixtures from basketball-schedule.js.
+  const basketballEvents = window.KAHSI_BASKETBALL_SCHEDULE || [];
   basketballEvents.forEach((event) => events.push({ ...event, sport: "basketball" }));
   events.sort((a, b) => new Date(a.date) - new Date(b.date));
   const firstBasketballEvent = events.find((event) => event.sport === "basketball");
