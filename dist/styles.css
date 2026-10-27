@@ -2560,3 +2560,6 @@ body.thanks-dialog-open { overflow: hidden; }
 .thanks-partner-link:hover { box-shadow: 0 0 0 2px var(--blue); }
 .thanks-partner-link:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
 .thanks-partner-link .thanks-partner-name::after { content: " ↗"; color: var(--blue); }
+
+.contact-method-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.contact-method-actions .button { flex: 1 1 150px; }

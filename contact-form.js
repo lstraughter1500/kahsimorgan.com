@@ -47,11 +47,18 @@
     }
 
     const body = encodeURIComponent(lines.join("\n"));
+    if (event.submitter?.value === "email") {
+      const subject = encodeURIComponent("Kahsi Morgan recruiting contact request");
+      const cc = encodeURIComponent("skmorgan05@hotmail.com");
+      window.location.href = `mailto:kahsi0609@gmail.com?cc=${cc}&subject=${subject}&body=${body}`;
+      return;
+    }
+
     // iOS Messages uses &body; other SMS handlers use ?body.
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
       (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
     const separator = isIOS ? "&" : "?";
     window.location.href = `sms:+13045399949${separator}body=${body}`;
-    // Keep the entered details available if the visitor cancels the text draft.
+    // Keep the entered details available if the visitor cancels the draft.
   });
 })();
