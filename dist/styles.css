@@ -2637,3 +2637,10 @@ body.thanks-dialog-open { overflow: hidden; }
 .schedule-empty p { margin: 0; color: #38557e; font: 400 .95rem/1.6 Arial, sans-serif; }
 .schedule-actions { padding: 0 1rem 1.3rem; }
 .schedule-actions a { display: inline-block; text-decoration: none; }
+
+.about-photo-contact { padding: 1.25rem; text-align: center; }
+.about-photo-contact .button { display: inline-block; text-decoration: none; }
+@media (max-width: 760px) {
+  .hero-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; }
+  .hero-actions .button { min-width: 0; width: 100%; padding: .9rem .4rem; font-size: clamp(.8rem, 3.5vw, 1.05rem); }
+}
