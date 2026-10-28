@@ -2646,3 +2646,17 @@ body.thanks-dialog-open { overflow: hidden; }
 }
 
 .hero-actions button.button, .about-photo-contact button.button { font-family: inherit; cursor: pointer; }
+
+.spotlight-section { width: min(96%, 1480px); margin: 1rem auto 2rem; }
+.spotlight-intro { margin: 0 1.2rem 1.25rem; color: #38557e; font: 400 1rem/1.6 Arial, sans-serif; }
+.spotlight-card { display: grid; grid-template-columns: 1.1fr 1fr; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: white; box-shadow: var(--shadow); }
+.spotlight-photo { display: block; background: var(--navy); }
+.spotlight-photo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.spotlight-copy { padding: clamp(1.4rem, 3vw, 3rem); align-self: center; }
+.spotlight-copy .spotlight-source { margin: 0 0 1rem; color: var(--blue); font: 700 .8rem/1.6 Arial, sans-serif; text-transform: uppercase; letter-spacing: .08em; }
+.spotlight-source span { color: #38557e; font-weight: 400; }
+.spotlight-copy h3 { margin: 0 0 1rem; color: var(--navy); font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 400; line-height: 1.1; text-transform: uppercase; }
+.spotlight-copy p { color: #38557e; font: 400 1rem/1.7 Arial, sans-serif; }
+.spotlight-copy .spotlight-credit { margin: 1rem 0; font-size: .8rem; }
+.spotlight-copy .button { display: inline-block; text-decoration: none; }
+@media(max-width:760px) { .spotlight-card { grid-template-columns: 1fr; } .spotlight-photo img { height: auto; } }
