@@ -24,7 +24,7 @@
     <meta name="twitter:description" content="Meet Kahsi Morgan, a Class of 2028 student-athlete, basketball and soccer captain, and aspiring physical therapy student with a 4.87 GPA.">
     <meta name="twitter:image" content="https://kahsimorgan.com/assets/social/kahsi-morgan-recruiting-2028.jpg">
     <meta name="twitter:image:alt" content="Kahsi Morgan, Class of 2028. Basketball | Soccer. 4.87 GPA. KahsiMorgan.com.">
-    <link rel="stylesheet" href="styles.css?v=20261027-contact-buttons">
+    <link rel="stylesheet" href="styles.css?v=20261027-contact-popup">
   </head>
   <body>
     <header class="site-header">
@@ -101,7 +101,7 @@
         </article>
         <figure class="about-photo">
           <img src="assets/basketball-hero.jpeg" alt="Kahsi Morgan seated in basketball uniform holding a basketball">
-          <figcaption class="about-photo-contact"><a href="contact.html" class="button primary">Contact Kahsi</a></figcaption>
+          <figcaption class="about-photo-contact"><button type="button" class="button primary" data-open-contact-form>Contact Kahsi</button></figcaption>
         </figure>
       </section>
     </main>
@@ -110,5 +110,26 @@
       <img src="assets/km-logo.png" alt="">
       <div><strong>Kahsi Morgan Recruiting</strong><span>Class of 2028 // Dual-Sport Athlete</span></div>
     </footer>
+    <dialog class="contact-dialog" id="requestContactDialog" aria-labelledby="requestContactTitle">
+      <form class="request-form" method="dialog">
+        <div class="dialog-heading">
+          <h2 id="requestContactTitle">Contact Kahsi</h2>
+          <button type="button" class="dialog-close" data-close-contact-form aria-label="Close contact form">Close</button>
+        </div>
+        <label>Name<input name="name" type="text" autocomplete="name" required></label>
+        <label>School<input name="school" type="text" autocomplete="organization" required></label>
+        <label>Sport<select name="sport" required><option value="">Select sport</option><option>Soccer</option><option>Basketball</option><option>Both</option></select></label>
+        <label>Role Within Program<input name="role" type="text" placeholder="Coach, recruiter, assistant coach" required></label>
+        <label>Phone Number<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Email Address<input name="email" type="email" autocomplete="email" required></label>
+        <label>Message<textarea name="message" rows="4" placeholder="Optional message"></textarea></label>
+        <p id="contact-method-note">Choose text or email. Your message opens in your messaging or email app, ready for you to review and send.</p>
+        <div class="contact-method-actions" aria-describedby="contact-method-note">
+          <button type="submit" class="button primary" name="contact-method" value="text">Text Kahsi</button>
+          <button type="submit" class="button secondary" name="contact-method" value="email">Email Kahsi</button>
+        </div>
+      </form>
+    </dialog>
+    <script src="contact-form.js?v=20261026-contact-options"></script>
   </body>
 </html>
