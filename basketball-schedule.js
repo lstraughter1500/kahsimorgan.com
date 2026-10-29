@@ -91,8 +91,8 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
     "id": "2026-12-29-8",
     "date": "2026-12-29",
     "startTime": null,
-    "opponent": "Shady Spring",
-    "title": "vs Shady Spring",
+    "opponent": "To Be Announced",
+    "title": "vs To Be Announced",
     "kind": "Tournament",
     "event": "Little General Battle for the Armory",
     "note": "",
@@ -103,8 +103,8 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
     "id": "2026-12-30-9",
     "date": "2026-12-30",
     "startTime": null,
-    "opponent": "To Be Determined",
-    "title": "vs Opponent TBA",
+    "opponent": "To Be Announced",
+    "title": "vs To Be Announced",
     "kind": "Tournament",
     "event": "Little General Battle for the Armory",
     "note": "",
@@ -367,7 +367,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
         return `${heading}<button type="button" class="event-card schedule-game upcoming-game" data-event-accent="${eventAccent(game)}" data-game-kind="${game.kind.toLowerCase()}" data-game-id="${escapeHTML(game.id)}" aria-haspopup="dialog" aria-label="${escapeHTML(formatDay(game.date,{month:'long',day:'numeric'})+', '+game.title+', '+timeText(game)+'. View game details and directions')}">
           <time class="upcoming-date" datetime="${escapeHTML(game.date)}"><span>${escapeHTML(formatDay(game.date,{month:'short'}))}</span><b>${escapeHTML(formatDay(game.date,{day:'numeric'}))}</b><span>${escapeHTML(formatDay(game.date,{weekday:'short'}))}</span></time>
           <span class="upcoming-copy"><span class="upcoming-kicker">2026–27 Basketball <span class="upcoming-badge">${escapeHTML(game.kind)}</span></span>
-          <strong>${game.kind==='Exhibition'?escapeHTML(game.title):`Capital <em>${separator(game)}</em> ${escapeHTML(opponentName(game))}`}</strong>
+          <strong>${game.kind==='Exhibition'?escapeHTML(game.title):`<em>${separator(game)}</em> ${escapeHTML(opponentName(game))}`}</strong>
           ${game.event && game.kind!=='Exhibition'?`<span class="upcoming-event">${escapeHTML(game.event)}</span>`:''}
           ${game.note?`<span class="upcoming-event">${escapeHTML(game.note)}</span>`:''}
           <span class="upcoming-footer"><span>${confirmedTime(game)?escapeHTML(timeText(game)):'Tip-off TBA'}</span><span>Game details <span aria-hidden="true">↗</span></span></span></span>
