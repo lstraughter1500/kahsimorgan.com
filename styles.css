@@ -2688,3 +2688,186 @@ body.spotlight-dialog-open { overflow: hidden; }
   .spotlight-tile-copy { padding: 1.1rem; }
   .spotlight-tile-title { font-size: 1.35rem; }
 }
+
+.schedule-help { margin: 1rem 1rem 0; color: #38557e; font: 400 .95rem/1.6 Arial, sans-serif; }
+.schedule-game { display: block; width: 100%; text-align: left; font: inherit; cursor: pointer; }
+.schedule-game:hover { background: #eaf3ff; border-color: var(--blue); }
+.schedule-game:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.schedule-game time { color: #38557e; font: 700 .85rem/1.5 Arial, sans-serif; }
+.schedule-game strong { margin: .4rem 0 .6rem; }
+.schedule-game .schedule-row-detail, .schedule-game .schedule-row-event { font: 400 .9rem/1.6 Arial, sans-serif; letter-spacing: 0; text-transform: none; }
+.schedule-game .schedule-row-action { margin-top: .65rem; font: 700 .8rem/1.5 Arial, sans-serif; letter-spacing: 0; text-transform: none; color: var(--blue); }
+.schedule-row-action span { display: inline; color: inherit; }
+.schedule-month { margin: 1rem 0 .25rem; font-size: 1.6rem; color: var(--navy); font-weight: 400; text-transform: uppercase; }
+body.schedule-dialog-open { overflow: hidden; }
+
+/* Game-day cards: isolated to schedule popups and homepage upcoming fixtures. */
+.schedule-dialog { --game-royal: #4169e1; width: min(640px, calc(100vw - 32px)); max-width: calc(100vw - 32px); max-height: min(90dvh, calc(100dvh - 32px)); padding: 0; border: 1px solid #c5cbd6; border-radius: 16px; background: white; color: #101521; box-shadow: 0 24px 80px #0005; overflow: auto; }
+.schedule-dialog[open] { animation: game-card-enter 180ms ease-out; }
+.schedule-dialog::backdrop { background: #050b15c9; animation: game-backdrop-enter 180ms ease-out; }
+.game-modal-topbar { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: .65rem; padding: 12px 20px 8px; color: white; background: #4169e1; }
+.game-season-label { flex: 1; font: 700 .7rem/1.4 Arial, sans-serif; letter-spacing: .15em; text-transform: uppercase; }
+.game-location-badge { border: 1px solid #ffffff80; border-radius: 4px; padding: 5px 8px; font: 700 .65rem/1.3 Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+.schedule-dialog .schedule-close { display: grid; flex: 0 0 44px; place-items: center; width: 44px; height: 44px; min-width: 44px; padding: 0; border: 0; border-radius: 50%; color: white; background: #ffffff1c; box-shadow: none; font: 400 30px/1 Arial, sans-serif; cursor: pointer; }
+.schedule-dialog .schedule-close:hover { background: #ffffff35; }
+.schedule-dialog .schedule-close:focus-visible { outline: 2px solid white; outline-offset: 2px; }
+.game-card-header { padding: 10px 24px 24px; color: white; background: linear-gradient(180deg, #4169e1, #2f52ba); }
+.schedule-dialog .game-matchup { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); align-items: center; gap: 14px; margin: 10px 0 18px; font-weight: 400; }
+.game-team { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.game-team-name { font-size: clamp(1.8rem,4.5vw,2.6rem); line-height: 1.08; text-transform: uppercase; overflow-wrap: anywhere; }
+.game-team-sub { margin-top: .35rem; font: 400 .7rem/1.3 Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: #e4eaff; }
+.game-versus { font: italic 700 .8rem Arial, sans-serif; color: #d6ddef; }
+.game-capital-label { margin: 0 0 .5rem; color: #e4eaff; font: 700 .7rem/1.5 Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.game-special-title { margin: .35rem 0 1rem; font-size: clamp(1.7rem,5vw,2.5rem); font-weight: 400; line-height: 1.08; text-transform: uppercase; }
+.game-when { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: .35rem 1rem; margin: 0; color: white; font: 600 .9rem/1.5 Arial, sans-serif; text-align: center; }
+.game-tipoff { padding: .2rem .5rem; border-radius: 4px; background: #06163130; font-weight: 700; }
+.game-time-note { margin: .6rem 0 0; color: #e7ecff; text-align: center; font: 400 .75rem/1.5 Arial, sans-serif; }
+.game-card-body { padding: 22px 24px 24px; }
+.game-event-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 16px; }
+.game-event-tags span { padding: .45rem .6rem; border: 1px solid var(--event-color,#4169e1); border-radius: 5px; color: var(--event-color,#3155ba); background: var(--event-tint,#edf1ff); font: 700 .75rem/1.4 Arial, sans-serif; }
+.game-venue { display: grid; grid-template-columns: 22px minmax(0,1fr); gap: 12px; padding: 16px; border: 1px solid #e0e3e9; border-radius: 10px; background: #f2f3f6; }
+.game-venue svg { width: 22px; height: 26px; color: #4169e1; }
+.game-venue strong { display: block; font: 700 .95rem/1.45 Arial, sans-serif; }
+.game-venue address { margin-top: .4rem; color: #505967; font: 400 .83rem/1.6 Arial, sans-serif; }
+.game-no-venue { margin: 0; color: #505967; font: 400 .9rem/1.6 Arial, sans-serif; }
+.game-controls { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 18px; }
+.game-controls:empty { display: none; }
+.game-controls.has-calendar { grid-template-columns: 1fr 1fr; }
+.game-directions-toggle, .game-calendar { display: flex; align-items: center; justify-content: center; gap: .6rem; min-height: 48px; padding: .8rem 1rem; border: 1px solid #4169e1; border-radius: 7px; background: #4169e1; color: white; font: inherit; font-size: 1.05rem; text-transform: uppercase; cursor: pointer; }
+.game-calendar { background: white; border-color: #b9c4df; color: #3155ba; }
+.game-directions-toggle:hover { background: #2d51c0; }
+.game-directions-toggle:focus-visible, .game-calendar:focus-visible, .schedule-map-links a:focus-visible { outline: 3px solid #4169e1; outline-offset: 3px; }
+.schedule-dialog .schedule-map-links { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; }
+.schedule-dialog .schedule-map-links[hidden] { display: none; }
+.schedule-map-links a { display: flex; align-items: center; justify-content: center; gap: .3rem; min-height: 44px; padding: .7rem .25rem; border: 1px solid #d1d8e8; border-radius: 6px; color: #3155ba; background: #f6f8ff; text-align: center; font: 700 .78rem/1.4 Arial, sans-serif; }
+.schedule-map-links a:hover { border-color: #4169e1; background: #eaf0ff; }
+.upcoming-game, .game-event-tags { --event-color: #3155ba; --event-tint: #edf1ff; }
+.upcoming-game[data-event-accent="canada"], .game-event-tags[data-event-accent="canada"] { --event-color: #b72536; --event-tint: #fff0f2; }
+.upcoming-game[data-event-accent="hope-gas"], .game-event-tags[data-event-accent="hope-gas"] { --event-color: #a65000; --event-tint: #fff2e5; }
+.upcoming-game[data-event-accent="armory"], .game-event-tags[data-event-accent="armory"] { --event-color: #19723d; --event-tint: #edf8f0; }
+[data-basketball-schedule="upcoming"] { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+[data-basketball-schedule="upcoming"] .upcoming-game:first-child { grid-column: 1 / -1; }
+.upcoming-game { display: grid; grid-template-columns: 64px minmax(0,1fr); gap: 16px; align-items: center; padding: 18px; border: 1px solid #d4dae5; border-top: 4px solid var(--event-color); background: white; border-radius: 10px; box-shadow: 0 5px 14px #07152b09; }
+.upcoming-game:hover { border-color: var(--event-color); background: var(--event-tint); }
+.upcoming-game .upcoming-date { display: flex; flex-direction: column; align-items: center; padding: .6rem .3rem; border-radius: 8px; background: var(--event-tint); color: var(--event-color); font: 400 .7rem/1.2 Arial, sans-serif; }
+.upcoming-game .upcoming-date span { color: inherit; font: 700 .65rem/1.4 Arial, sans-serif; letter-spacing: .1em; }
+.upcoming-date b { font: 800 2rem/1.2 Arial, sans-serif; }
+.upcoming-game .upcoming-copy { display: block; color: #101521; font: inherit; letter-spacing: 0; text-transform: none; }
+.upcoming-game .upcoming-kicker { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; color: #647085; font: 700 .6rem/1.4 Arial, sans-serif; letter-spacing: .05em; }
+.upcoming-game .upcoming-badge { padding: .2rem .4rem; border-radius: 4px; background: var(--event-tint); color: var(--event-color); font: 700 .6rem/1.3 Arial, sans-serif; letter-spacing: .04em; }
+.upcoming-game strong { margin: .5rem 0; color: #101521; font-size: clamp(1.25rem,2vw,1.65rem); line-height: 1.1; }
+.upcoming-game strong em { color: #6a7382; font: italic 700 .65rem Arial, sans-serif; vertical-align: middle; }
+.upcoming-game .upcoming-event { margin-bottom: .4rem; color: var(--event-color); font: 700 .72rem/1.4 Arial, sans-serif; letter-spacing: 0; text-transform: none; }
+.upcoming-game .upcoming-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem .7rem; padding-top: .5rem; border-top: 1px solid #e6e8ef; letter-spacing: 0; }
+.upcoming-game .upcoming-footer span { color: #5c6575; font: 400 .7rem/1.5 Arial, sans-serif; letter-spacing: 0; text-transform: none; }
+.upcoming-game .upcoming-footer > span:last-child { color: var(--event-color); font-weight: 700; }
+@keyframes game-card-enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes game-backdrop-enter { from { opacity: 0; } to { opacity: 1; } }
+@media(max-width:760px) {
+  [data-basketball-schedule="upcoming"] { grid-template-columns: 1fr; }
+  .upcoming-game { padding: 16px 14px; grid-template-columns: 58px minmax(0,1fr); gap: 12px; }
+  .upcoming-game strong { font-size: 1.35rem; }
+  .schedule-dialog { width: calc(100vw - 24px); max-width: calc(100vw - 24px); max-height: calc(100dvh - 32px); border-radius: 12px; }
+  .game-modal-topbar { padding: 10px 12px 6px; gap: .4rem; }
+  .game-season-label { font-size: .6rem; letter-spacing: .08em; }
+  .game-location-badge { font-size: .6rem; padding: 4px 6px; }
+  .game-card-header { padding: 8px 18px 20px; }
+  .schedule-dialog .game-matchup { gap: 8px; }
+  .game-team-name { font-size: clamp(1rem,5.5vw,1.5rem); overflow-wrap: normal; word-break: normal; }
+  .game-card-body { padding: 18px; }
+  .game-controls.has-calendar { grid-template-columns: 1fr; }
+  .game-venue { padding: 14px 12px; gap: 10px; }
+  .schedule-dialog .schedule-map-links { grid-template-columns: 1fr; }
+}
+@media(prefers-reduced-motion:reduce) { .schedule-dialog[open], .schedule-dialog::backdrop { animation: none; } }
+
+.schedule-dialog[data-event-accent="canada"] .game-location-badge { background: #b72536; border-color: #ffc3cb; }
+.upcoming-game { --event-color: #4169e1; --event-ink: #3155ba; }
+.upcoming-game[data-event-accent="canada"] { --event-color: #c52b3c; --event-ink: #a91f30; }
+.upcoming-game[data-event-accent="hope-gas"] { --event-color: #e77816; --event-ink: #984600; }
+.upcoming-game[data-event-accent="armory"] { --event-color: #21854a; --event-ink: #166435; }
+.upcoming-game .upcoming-date, .upcoming-game .upcoming-badge, .upcoming-game .upcoming-event, .upcoming-game .upcoming-footer > span:last-child { color: var(--event-ink); }
+.upcoming-game .upcoming-footer > span:last-child { display: flex; align-items: center; gap: .3rem; }
+.upcoming-game .upcoming-footer > span:last-child span { display: inline; color: inherit; }
+
+/* Reference card: stacked matchup, white date panel, visible map choices. */
+.schedule-dialog .game-matchup { grid-template-columns: 1fr; gap: 7px; margin: 6px 0 0; }
+.game-card-header { padding: 6px 24px 26px; background: #305cda; }
+.game-modal-topbar { background: #305cda; }
+.game-team-name { font-size: clamp(2rem,5vw,3.3rem); line-height: 1.05; overflow-wrap: normal; }
+.game-team:first-child .game-team-name { font-size: clamp(2.7rem,6vw,3.8rem); }
+.game-versus { font: 700 1.1rem/1 Arial, sans-serif; color: white; letter-spacing: .1em; }
+.game-location-badge { border: 0; border-radius: 999px; background: #ffffff25; }
+.schedule-dialog .schedule-close { background: transparent; }
+.game-card-body { padding: 20px 24px 18px; }
+.game-date-panel { text-align: center; margin: 0 0 20px; }
+.game-when { display: flex; flex-direction: column; gap: 3px; color: #11151c; }
+.game-when time { font: inherit; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 1.65rem; text-transform: uppercase; letter-spacing: .02em; }
+.game-tipoff { padding: 0; background: none; color: #252b35; font: 400 1.1rem/1.5 Arial, sans-serif; }
+.game-time-note { color: #737b88; margin-top: 4px; font-size: .8rem; }
+.game-venue { background: #f0f1f4; border-color: #eceef2; }
+.game-venue svg { color: #151b26; }
+.game-controls { margin-top: 14px; }
+.game-directions-toggle { font: 700 .95rem/1.5 Arial, sans-serif; text-transform: none; background: #305cda; border-color: #305cda; }
+.game-directions-toggle > span { font-size: 1.35rem; transform: rotate(-25deg); }
+.game-timezone { margin: 22px 0 0; text-align: center; color: #79818e; font: 400 .75rem/1.5 Arial, sans-serif; }
+.schedule-key { display: flex; flex-wrap: wrap; gap: .65rem 1.1rem; margin: 1rem; padding: 0; list-style: none; }
+.schedule-key li { display: flex; align-items: center; gap: .4rem; color: #434d60; font: 400 .75rem/1.4 Arial, sans-serif; }
+.schedule-key li > span { display: block; width: 11px; height: 11px; border-radius: 3px; border: 1px solid #0002; }
+.key-home { background: #4169e1; }.key-away { background: #7b8492; }.key-canada { background: #c52b3c; }.key-hope { background: #e77816; }.key-armory { background: #21854a; }
+.schedule-game[data-game-kind="home"] { border-left-color: #4169e1; background: #eff3ff; }
+.schedule-game[data-game-kind="away"] { border-left-color: #7b8492; background: #f1f2f4; }
+.upcoming-game[data-game-kind="home"] { --event-color: #4169e1; --event-ink: #3155ba; --event-tint: #dfe7ff; border-top-color: #4169e1; }
+.upcoming-game[data-game-kind="away"] { --event-color: #7b8492; --event-ink: #394454; --event-tint: #e0e3e8; border-top-color: #7b8492; }
+.upcoming-game[data-game-kind="home"] .upcoming-badge { background: #4169e1; color: white; }
+.upcoming-game[data-game-kind="away"] .upcoming-badge { background: #394454; color: white; }
+.schedule-game[data-event-accent="canada"] { border-left-color: #c52b3c; }
+.schedule-game[data-event-accent="hope-gas"] { border-left-color: #e77816; }
+.schedule-game[data-event-accent="armory"] { border-left-color: #21854a; }
+@media(max-width:760px) {
+  .game-card-header { padding: 4px 16px 24px; }
+  .schedule-dialog .game-matchup { gap: 7px; }
+  .game-team-name { font-size: clamp(1.7rem,8.5vw,2.5rem); }
+  .game-team:first-child .game-team-name { font-size: clamp(2.6rem,12vw,3.2rem); }
+  .game-versus { font-size: .9rem; }
+  .game-card-body { padding: 18px 16px 16px; }
+  .game-when time { font-size: 1.4rem; }
+  .game-tipoff { font-size: 1rem; }
+  .schedule-dialog .schedule-map-links { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .schedule-map-links a { min-height: 48px; font-size: .72rem; }
+}
+
+.schedule-game[data-game-kind="away"]:not(.upcoming-game) strong { color: #283343; }
+.schedule-dialog .game-matchup { justify-items: center; text-align: center; }
+
+/* Compact directions choices and the full season game-card layout. */
+.game-card-body { padding: 18px 24px 16px; }
+.game-date-panel { margin-bottom: 16px; }
+.game-venue { padding: 14px; }
+.game-controls { gap: 8px; margin-top: 16px; }
+.game-directions-label { margin: 0; color: #747c89; text-align: center; font: 400 .82rem/1.5 Arial, sans-serif; }
+.schedule-dialog .schedule-map-links { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
+.schedule-dialog .schedule-map-links a { min-width: 0; min-height: 52px; padding: 10px 7px; gap: 9px; border: 1px solid #cfd3dd; border-radius: 8px; background: white; color: #141a25; font: 400 .86rem/1.25 Arial, sans-serif; text-decoration: none; box-shadow: 0 0 0 1px #e9eaf0; }
+.schedule-map-links img { flex: 0 0 23px; width: 23px; height: 27px; object-fit: contain; }
+.schedule-map-links a span { min-width: 0; }
+.schedule-dialog .schedule-map-links a:hover { background: #f0f4ff; border-color: #4169e1; }
+.game-timezone { margin-top: 18px; }
+.full-basketball-schedule .events-panel { overflow: hidden; border-radius: 14px; }
+.full-basketball-schedule .schedule-help { margin: 22px 24px 12px; }
+.full-basketball-schedule .schedule-key { margin: 16px 24px 22px; }
+[data-basketball-schedule="all"] { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; padding: 0 24px 24px; background: #f8f9fc; }
+[data-basketball-schedule="all"] .schedule-month { grid-column: 1 / -1; display: flex; align-items: center; gap: 16px; margin: 16px 0 2px; color: #15213b; font-size: 1.8rem; letter-spacing: .04em; }
+[data-basketball-schedule="all"] .schedule-month::after { content: ''; flex: 1; height: 1px; background: #d7dfea; }
+[data-basketball-schedule="all"] .upcoming-game { height: 100%; border-left: 1px solid #d4dae5; }
+[data-basketball-schedule="all"] .upcoming-game strong { display: block; }
+@media(max-width:760px) {
+  .game-card-body { padding: 16px 16px 14px; }
+  .game-date-panel { margin-bottom: 14px; }
+  .schedule-dialog .schedule-map-links { gap: 7px; }
+  .schedule-dialog .schedule-map-links a { gap: 5px; padding: 8px 4px; font-size: .72rem; }
+  .schedule-map-links img { flex-basis: 19px; width: 19px; height: 24px; }
+  .game-timezone { margin-top: 16px; }
+  [data-basketball-schedule="all"] { grid-template-columns: 1fr; gap: 12px; padding: 0 14px 18px; }
+  .full-basketball-schedule .schedule-help { margin: 18px 16px 12px; }
+  .full-basketball-schedule .schedule-key { margin: 14px 16px 18px; gap: .65rem .9rem; }
+}

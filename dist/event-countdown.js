@@ -39,7 +39,9 @@
 
   // The schedule and countdown share the basketball fixtures from basketball-schedule.js.
   const basketballEvents = window.KAHSI_BASKETBALL_SCHEDULE || [];
-  basketballEvents.forEach((event) => events.push({ ...event, sport: "basketball" }));
+  // Dates without confirmed tip-off times must never create a midnight countdown.
+  basketballEvents.filter(event => event.startTime && Number.isFinite(Date.parse(event.startTime)))
+    .forEach(event => events.push({ ...event, date: event.startTime, details: `${event.kind} · ${event.venue || event.event}`, sport: "basketball" }));
   events.sort((a, b) => new Date(a.date) - new Date(b.date));
   const firstBasketballEvent = events.find((event) => event.sport === "basketball");
   const countdownLeadTime = 14 * 24 * 60 * 60 * 1000;
@@ -107,7 +109,7 @@
       if (loadingStatus) {
         loadingStatus.textContent = firstBasketballEvent
           ? "Schedule set. Countdown begins 14 days before tip-off."
-          : "Schedule coming soon.";
+          : basketballEvents.length ? "Schedule posted. Tip-off times TBA." : "Schedule coming soon.";
       }
       setClock(0, 0, 0, 0);
       return;
