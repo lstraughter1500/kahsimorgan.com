@@ -1,0 +1,53 @@
+/* Self-contained intro: no homepage layout or animation rules are changed. */
+.recruit-intro[hidden] { display: none; }
+.intro-pending .recruit-intro { display: block; }
+.recruit-intro { position: fixed; inset: 0; z-index: 1000; overflow: hidden; color: #fff; font-family: Arial, sans-serif; isolation: isolate; }
+.recruit-intro-backdrop { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 100%, #11274e 0, #080f1b 42%, #05070b 76%); }
+.recruit-intro-brand { position: absolute; top: 47%; left: 50%; transform: translate(-50%, -50%); width: min(80vw, 900px); text-align: center; }
+.recruit-intro-logo { width: clamp(150px, 16vw, 210px); height: auto; margin: 0 auto 1.8rem; opacity: 0; will-change: transform, opacity; }
+.recruit-intro-name { font: 700 clamp(20px, 2.25vw, 32px)/1.25 Arial, sans-serif; letter-spacing: .17em; text-transform: uppercase; opacity: 0; }
+.recruit-intro-motto { margin-top: .6rem; font: 800 clamp(36px, 5vw, 64px)/1.08 Arial, sans-serif; letter-spacing: -.045em; text-transform: uppercase; opacity: 0; }
+.recruit-intro-class { margin-top: 1.5rem; font: 600 clamp(10px, 1.1vw, 14px)/1.6 Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #a9b3c5; opacity: 0; }
+.recruit-intro-class span { padding: 0 .7rem; color: #6d96f2; }
+.recruit-basket, .recruit-soccer { position: absolute; top: 0; left: 0; max-width: none; width: 120px; height: 120px; opacity: 0; pointer-events: none; will-change: transform, opacity; }
+.recruit-basket { z-index: 2; }
+.recruit-soccer { z-index: 5; }
+.recruit-basket-shadow { position: absolute; top: 0; left: 0; width: 100px; height: 13px; border-radius: 50%; background: radial-gradient(ellipse, #000b, transparent 72%); opacity: 0; will-change: transform, opacity; }
+.recruit-intro-site, .recruit-intro-skip { position: absolute; bottom: max(2rem, env(safe-area-inset-bottom)); z-index: 6; color: #b5bece; }
+.recruit-intro-site { left: 3.5vw; font: 600 10px/1.5 Arial, sans-serif; letter-spacing: .18em; text-transform: uppercase; }
+.recruit-intro-skip { right: 3.5vw; padding: .8rem; border: 1px solid #8998b54d; border-radius: 5px; background: #060b1480; font: 400 13px Arial, sans-serif; cursor: pointer; }
+.recruit-intro-skip:hover, .recruit-intro-skip:focus-visible { color: white; border-color: #abbfe8; outline: 2px solid #547bd6; outline-offset: 3px; }
+@media(max-width:760px) {
+  .recruit-intro-brand { top: 43%; width: 94vw; }
+  .recruit-intro-logo { width: clamp(128px, 38vw, 160px); margin-bottom: 1.55rem; }
+  .recruit-intro-name { font-size: clamp(18px, 5.5vw, 25px); letter-spacing: .13em; }
+  .recruit-intro-motto { font-size: clamp(26px, 8.1vw, 38px); margin-top: .55rem; }
+  .recruit-intro-class { font-size: clamp(8px, 2.35vw, 11px); letter-spacing: .045em; margin-top: 1.3rem; }
+  .recruit-intro-class span { padding: 0 .4rem; }
+  .recruit-intro-site { left: 5vw; font-size: 8px; }
+  .recruit-intro-skip { right: 4vw; }
+}
+@media(max-height:500px) and (min-width:761px) {
+  .recruit-intro-logo { width: 110px; margin-bottom: .5rem; }
+  .recruit-intro-motto { font-size: 36px; }
+  .recruit-intro-class { margin-top: .75rem; }
+}
+@media(prefers-reduced-motion:reduce) { .intro-pending .recruit-intro { display: none; } }
+
+/* Reference lockup and the final brand screen, concealed by the soccer ball. */
+.recruit-intro-logo { margin-bottom: .45rem; }
+.recruit-intro-logo-rule { width: clamp(124px, 13vw, 180px); height: 3px; margin: 0 auto 1.8rem; background: #4775e6; opacity: 0; }
+.recruit-intro-standard { position: absolute; z-index: 1; left: 14%; top: 50%; width: 76%; max-width: 1100px; transform: translateY(-50%); visibility: hidden; }
+.recruit-standard-name { color: #90aaf0; font: 700 clamp(12px, 1.3vw, 18px)/1.5 Arial, sans-serif; letter-spacing: .22em; text-transform: uppercase; }
+.recruit-standard-title { margin-top: 2rem; font: 800 clamp(44px, 6.8vw, 100px)/1.05 Arial, sans-serif; letter-spacing: -.045em; text-transform: uppercase; }
+.recruit-standard-class { margin-top: 2rem; color: #a5b1c5; font: 600 clamp(11px, 1.2vw, 16px)/1.7 Arial, sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+.recruit-standard-values { margin-top: 2.4rem; color: #829fef; font: 700 clamp(11px, 1.2vw, 16px)/1.5 Arial, sans-serif; letter-spacing: .13em; text-transform: uppercase; }
+@media(max-width:760px) {
+  .recruit-intro-logo { margin-bottom: .45rem; }
+  .recruit-intro-logo-rule { width: 32vw; max-width: 142px; margin-bottom: 1.6rem; }
+  .recruit-intro-standard { left: 6%; width: 88%; top: 49%; }
+  .recruit-standard-name { font-size: 11px; }
+  .recruit-standard-title { font-size: clamp(30px, 9.5vw, 56px); margin-top: 1.9rem; }
+  .recruit-standard-class { font-size: clamp(8px, 2.6vw, 12px); margin-top: 1.8rem; letter-spacing: .12em; }
+  .recruit-standard-values { font-size: clamp(9px, 2.7vw, 12px); margin-top: 2.5rem; }
+}
