@@ -16,6 +16,18 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
     "address": null
   },
   {
+    "id": "2026-12-04-logan",
+    "date": "2026-12-04",
+    "startTime": null,
+    "opponent": "Logan",
+    "title": "vs Logan",
+    "kind": "Home",
+    "event": "",
+    "note": "Scrimmage",
+    "venue": "Capital High School Gymnasium",
+    "address": "1500 Greenbrier Street, Charleston, WV 25311"
+  },
+  {
     "id": "2026-12-08-2",
     "date": "2026-12-08",
     "startTime": null,
@@ -86,18 +98,6 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
     "note": "",
     "venue": "Herbert Hoover High School Gymnasium",
     "address": "775 Husky Way, Elkview, WV 25071"
-  },
-  {
-    "id": "2026-12-29-8",
-    "date": "2026-12-29",
-    "startTime": null,
-    "opponent": "To Be Announced",
-    "title": "vs To Be Announced",
-    "kind": "Tournament",
-    "event": "Little General Battle for the Armory",
-    "note": "",
-    "venue": "Beckley-Raleigh County Convention Center",
-    "address": "200 Armory Drive, Beckley, WV 25801"
   },
   {
     "id": "2026-12-30-9",
