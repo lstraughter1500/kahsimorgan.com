@@ -18,7 +18,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2026-12-04-logan",
     "date": "2026-12-04",
-    "startTime": null,
+    "startTime": "2026-12-04T19:00:00-05:00",
     "opponent": "Logan",
     "title": "vs Logan",
     "kind": "Home",
@@ -30,7 +30,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2026-12-08-2",
     "date": "2026-12-08",
-    "startTime": null,
+    "startTime": "2026-12-08T19:30:00-05:00",
     "opponent": "Greenbrier East",
     "title": "at Greenbrier East",
     "kind": "Away",
@@ -54,7 +54,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2026-12-15-4",
     "date": "2026-12-15",
-    "startTime": null,
+    "startTime": "2026-12-15T19:00:00-05:00",
     "opponent": "Parkersburg South",
     "title": "vs Parkersburg South",
     "kind": "Home",
@@ -66,7 +66,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2026-12-18-5",
     "date": "2026-12-18",
-    "startTime": null,
+    "startTime": "2026-12-18T20:00:00-05:00",
     "opponent": "North Marion",
     "title": "vs North Marion",
     "kind": "Tournament",
@@ -78,7 +78,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2026-12-19-6",
     "date": "2026-12-19",
-    "startTime": null,
+    "startTime": "2026-12-19T15:30:00-05:00",
     "opponent": "Morgantown",
     "title": "vs Morgantown",
     "kind": "Tournament",
@@ -90,7 +90,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2026-12-22-7",
     "date": "2026-12-22",
-    "startTime": null,
+    "startTime": "2026-12-22T19:00:00-05:00",
     "opponent": "Herbert Hoover",
     "title": "at Herbert Hoover",
     "kind": "Away",
@@ -114,7 +114,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2027-01-07-10",
     "date": "2027-01-07",
-    "startTime": null,
+    "startTime": "2027-01-07T19:00:00-05:00",
     "opponent": "Parkersburg",
     "title": "vs Parkersburg",
     "kind": "Home",
@@ -126,7 +126,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2027-01-13-11",
     "date": "2027-01-13",
-    "startTime": null,
+    "startTime": "2027-01-13T19:00:00-05:00",
     "opponent": "Huntington",
     "title": "at Huntington",
     "kind": "Away",
@@ -138,7 +138,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2027-01-15-12",
     "date": "2027-01-15",
-    "startTime": null,
+    "startTime": "2027-01-15T19:00:00-05:00",
     "opponent": "George Washington",
     "title": "vs George Washington",
     "kind": "Home",
@@ -150,7 +150,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2027-01-19-13",
     "date": "2027-01-19",
-    "startTime": null,
+    "startTime": "2027-01-19T19:00:00-05:00",
     "opponent": "South Charleston",
     "title": "at South Charleston",
     "kind": "Away",
@@ -162,7 +162,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2027-01-21-14",
     "date": "2027-01-21",
-    "startTime": null,
+    "startTime": "2027-01-21T19:00:00-05:00",
     "opponent": "Woodrow Wilson",
     "title": "vs Woodrow Wilson",
     "kind": "Home",
@@ -174,7 +174,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2027-01-26-15",
     "date": "2027-01-26",
-    "startTime": null,
+    "startTime": "2027-01-26T19:00:00-05:00",
     "opponent": "Herbert Hoover",
     "title": "vs Herbert Hoover",
     "kind": "Home",
@@ -186,7 +186,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2027-01-27-16",
     "date": "2027-01-27",
-    "startTime": null,
+    "startTime": "2027-01-27T19:00:00-05:00",
     "opponent": "Hurricane",
     "title": "vs Hurricane",
     "kind": "Home",
@@ -198,7 +198,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2027-01-29-17",
     "date": "2027-01-29",
-    "startTime": null,
+    "startTime": "2027-01-29T19:00:00-05:00",
     "opponent": "Riverside",
     "title": "vs Riverside",
     "kind": "Home",
@@ -210,7 +210,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2027-02-02-18",
     "date": "2027-02-02",
-    "startTime": null,
+    "startTime": "2027-02-02T19:00:00-05:00",
     "opponent": "Spring Valley",
     "title": "at Spring Valley",
     "kind": "Away",
@@ -222,7 +222,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2027-02-04-19",
     "date": "2027-02-04",
-    "startTime": null,
+    "startTime": "2027-02-04T19:00:00-05:00",
     "opponent": "St. Albans",
     "title": "at St. Albans",
     "kind": "Away",
@@ -234,7 +234,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2027-02-06-20",
     "date": "2027-02-06",
-    "startTime": null,
+    "startTime": "2027-02-06T15:30:00-05:00",
     "opponent": "Nicholas County",
     "title": "at Nicholas County",
     "kind": "Away",
@@ -246,7 +246,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2027-02-09-21",
     "date": "2027-02-09",
-    "startTime": null,
+    "startTime": "2027-02-09T19:00:00-05:00",
     "opponent": "Cabell Midland",
     "title": "at Cabell Midland",
     "kind": "Away",
@@ -258,7 +258,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2027-02-17-22",
     "date": "2027-02-17",
-    "startTime": null,
+    "startTime": "2027-02-17T19:00:00-05:00",
     "opponent": "Ripley",
     "title": "vs Ripley",
     "kind": "Home",
