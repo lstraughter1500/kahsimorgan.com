@@ -2871,3 +2871,14 @@ body.schedule-dialog-open { overflow: hidden; }
   .full-basketball-schedule .schedule-help { margin: 18px 16px 12px; }
   .full-basketball-schedule .schedule-key { margin: 14px 16px 18px; gap: .65rem .9rem; }
 }
+
+/* Compact attendance controls inside the existing game-day card. */
+.game-rsvp { text-align: center; padding: 12px 8px; margin: 0 0 16px; border-block: 1px solid #e5e8ef; }
+.game-rsvp-heading { margin: 0 0 8px; color: #303a4b; font: 400 .85rem/1.4 Arial, sans-serif; }
+.game-rsvp-button { min-height: 44px; padding: 10px 24px; border: 1px solid #4169e1; border-radius: 8px; background: #4169e1; color: white; cursor: pointer; font: 700 .9rem/1.3 Arial, sans-serif; }
+.game-rsvp-button[aria-pressed="true"] { background: #264dc2; }
+.game-rsvp-button:disabled { cursor: wait; opacity: .65; }
+.game-rsvp-button:focus-visible { outline: 3px solid #4169e1; outline-offset: 3px; }
+.game-rsvp-count { margin: 8px 0 0; color: #505967; font: 400 .78rem/1.4 Arial, sans-serif; }
+.game-rsvp-status { margin: 5px 0 0; color: #505967; font: 400 .73rem/1.4 Arial, sans-serif; }
+.game-rsvp-status:empty { display: none; }

@@ -286,6 +286,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   dialog.setAttribute('aria-labelledby','schedule-dialog-title');
   document.body.append(dialog);
   let activeGameId;
+  let stopAttendance;
   let calendarURL;
   const confirmedTime = game => Boolean(game.startTime && Number.isFinite(Date.parse(game.startTime)));
   const eventAccent = game => game.kind==='Exhibition' && /Canada/i.test(game.event) ? 'canada' : /Hope Gas/i.test(game.event) ? 'hope-gas' : /Battle for the Armory/i.test(game.event) ? 'armory' : 'royal';
@@ -318,6 +319,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
     }).join('\r\n')+'\r\n';
   }
   function showGame(game) {
+    stopAttendance?.();
     activeGameId=game.id;
     if (calendarURL) { URL.revokeObjectURL(calendarURL); calendarURL=null; }
     dialog.dataset.eventAccent=eventAccent(game);
@@ -339,6 +341,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
       <div class="game-card-body">
         <div class="game-date-panel"><p class="game-when"><time datetime="${escapeHTML(game.date)}">${escapeHTML(formatDay(game.date,{weekday:'short',month:'short',day:'numeric',year:'numeric'}))}</time><span class="game-tipoff">${hasTime?escapeHTML(timeText(game)):'Tip-off TBA'}</span></p>
         ${!hasTime?'<p class="game-time-note">Game time will be added once confirmed.</p>':''}</div>
+        <section class="game-rsvp" aria-label="Game attendance"><p class="game-rsvp-heading">Coming to the game?</p><button class="game-rsvp-button" type="button" aria-pressed="false" disabled>🙌 I’m Going</button><p class="game-rsvp-count" aria-live="polite" aria-atomic="true">Loading attendance…</p><p class="game-rsvp-status" role="status"></p></section>
         ${game.event && game.kind!=='Exhibition' || game.note?`<div class="game-event-tags" data-event-accent="${eventAccent(game)}">${game.event && game.kind!=='Exhibition'?`<span>${escapeHTML(game.event)}</span>`:''}${game.note?`<span>${escapeHTML(game.note)}</span>`:''}</div>`:''}
         ${game.venue?`<div class="game-venue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>${escapeHTML(game.venue)}</strong><address>${escapeHTML(game.address)}</address></div></div>`:'<p class="game-no-venue">No address or directions are listed for this exhibition.</p>'}
         <div class="game-controls">
@@ -351,6 +354,7 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
     dialog.showModal();
     document.body.classList.add('schedule-dialog-open');
     dialog.querySelector('.schedule-close').focus();
+    stopAttendance = window.KahsiAttendance?.attach(dialog, game.id);
   }
   function render() {
     // Keep the dialog and its originating keyboard focus stable during minute updates.
@@ -395,6 +399,8 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
     else if (!event.shiftKey && document.activeElement===last) { event.preventDefault(); first?.focus(); }
   });
   dialog.addEventListener('close',()=>{
+    stopAttendance?.();
+    stopAttendance = null;
     if (calendarURL) { URL.revokeObjectURL(calendarURL); calendarURL=null; }
     document.body.classList.remove('schedule-dialog-open');
     render();

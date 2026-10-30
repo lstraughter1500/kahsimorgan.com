@@ -6,6 +6,29 @@
     "enabled": true
   },
   "assets": {
-    "directory": "./dist"
-  }
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*"
+    ]
+  },
+  "main": "server/worker.mjs",
+  "d1_databases": [
+    {
+      "binding": "ATTENDANCE_DB",
+      "database_name": "kahsi-attendance",
+      "database_id": "4df00d95-3442-4ed6-a605-9797dc11fc4a",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "ratelimits": [
+    {
+      "name": "ATTENDANCE_LIMITER",
+      "namespace_id": "1001",
+      "simple": {
+        "limit": 30,
+        "period": 60
+      }
+    }
+  ]
 }
