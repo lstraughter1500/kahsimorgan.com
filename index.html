@@ -35,7 +35,7 @@
     <link rel="preload" as="image" href="assets/intro-km-white.svg">
     <link rel="preload" as="image" href="assets/intro-basketball.png">
     <link rel="preload" as="image" href="assets/intro-soccer-ball.png">
-    <link rel="stylesheet" href="styles.css?v=20261029-rsvp">
+    <link rel="stylesheet" href="styles.css?v=honors-coursework">
     <link rel="stylesheet" href="intro.css?v=20261028-reference-ending">
   </head>
   <body>
@@ -231,41 +231,50 @@
         </a>
       </section>
 
-      <section class="split-section single-split" id="academics">
-        <article class="academics-panel">
-          <div class="section-heading">
-            <p>Academics & Honors</p>
-            <h2>Student Athlete Snapshot</h2>
+      <section class="split-section honors-snapshot" id="academics" aria-labelledby="honors-title">
+        <header class="honors-header">
+          <div>
+            <p>Academics &amp; Honors</p>
+            <h2 id="honors-title">Student Athlete Snapshot</h2>
           </div>
-          <div class="academics-layout">
-            <div class="gpa-block">
-              <span>GPA</span>
-              <strong>4.87</strong>
-            </div>
-            <div>
-              <h3>Honors & Coursework</h3>
-              <ul>
-                <li>National Honor Society student</li>
-                <li>All Honors Courses</li>
-                <li>1 Dual Credit Course</li><li>1 Full College Course</li>
-              </ul>
-            </div>
-            <div>
-              <h3>Basketball Honors</h3>
-              <ul>
-                <li>2026 MSAC All-Conference — Special Honorable Mention (Basketball)</li>
-                <li>2026 Prep Hoops — No. 16 in West Virginia, Class of 2028 (Basketball)</li>
-              </ul>
-              <h3>Soccer Honors</h3>
-              <ul>
-                <li>2026 MSAC All-Conference — 2nd Team Mention (Soccer)</li>
-                <li>2026 WVSSAC All-State — 2nd Team Midfielder (Soccer)</li>
-              </ul>
-            </div>
+          <div class="honors-gpa">
+            <span>GPA</span>
+            <strong>4.87</strong>
+            <span>Class of 2028</span>
           </div>
-        </article>
-
-
+        </header>
+        <div class="honors-grid">
+          <article class="honors-card honors-classroom">
+            <p class="honors-category"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5-10-5Zm4 2v6c3 3 9 3 12 0v-6m4-2v7"/></svg> In the classroom</p>
+            <h3>Honors &amp; Coursework</h3>
+            <div class="classroom-feature">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="m9 13-2 8 5-3 5 3-2-8"/></svg>
+              <div><span>Membership</span><strong>National Honor Society</strong></div>
+            </div>
+            <p class="classroom-label">Coursework</p>
+            <ul class="classroom-courses">
+              <li class="classroom-honors">All Honors Courses</li>
+              <li><strong>1</strong><span>Dual Credit Course</span></li>
+              <li><strong>1</strong><span>Full College Course</span></li>
+            </ul>
+          </article>
+          <article class="honors-card honors-court">
+            <p class="honors-category"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m6 6 12 12M6 18 18 6M3 11c5 0 8-3 8-8m2 18c0-5 3-8 8-8"/></svg> On the court</p>
+            <h3>Basketball Honors</h3>
+            <ul>
+              <li><strong>2026 MSAC All-Conference</strong><span>Special Honorable Mention</span></li>
+              <li><strong>2026 Prep Hoops</strong><span>No. 16 in West Virginia · Class of 2028</span></li>
+            </ul>
+          </article>
+          <article class="honors-card honors-pitch">
+            <p class="honors-category"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M12 5v14M3 9h4v6H3m18-6h-4v6h4"/><circle cx="12" cy="12" r="2.5"/></svg> On the pitch</p>
+            <h3>Soccer Honors</h3>
+            <ul>
+              <li><strong>2026 MSAC All-Conference</strong><span>2nd Team Mention</span></li>
+              <li><strong>2026 WVSSAC All-State</strong><span>2nd Team Midfielder</span></li>
+            </ul>
+          </article>
+        </div>
       </section>
 
       <section class="social-connect" id="contact" aria-labelledby="social-connect-title">

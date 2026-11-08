@@ -2882,3 +2882,41 @@ body.schedule-dialog-open { overflow: hidden; }
 .game-rsvp-count { margin: 8px 0 0; color: #505967; font: 400 .78rem/1.4 Arial, sans-serif; }
 .game-rsvp-status { margin: 5px 0 0; color: #505967; font: 400 .73rem/1.4 Arial, sans-serif; }
 .game-rsvp-status:empty { display: none; }
+
+/* Academics and honors on the homepage and Academics page */
+.honors-snapshot { display: block; padding: clamp(1rem, 2.5vw, 2rem); border: 1px solid #dbe1ea; border-radius: 16px; background: #f4f5f7; scroll-margin-top: 5.5rem; }
+.honors-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
+.honors-header p, .honors-category, .honors-gpa span { margin: 0; font: 800 .72rem/1.4 Arial, sans-serif; letter-spacing: .13em; text-transform: uppercase; }
+.honors-header p { color: #2453a0; }
+.honors-header h2 { margin: .4rem 0 0; color: var(--navy); font-size: clamp(1.8rem, 4vw, 3.3rem); line-height: 1.04; text-transform: uppercase; }
+.honors-gpa { display: grid; grid-template-columns: auto 1fr; column-gap: .7rem; row-gap: .1rem; padding: .55rem .85rem; align-items: center; color: white; background: linear-gradient(120deg,#111827,#274bc1); border-radius: 10px; }
+.honors-gpa strong { grid-column: 1; grid-row: 1 / span 2; font-size: clamp(2.05rem, 3.4vw, 2.9rem); line-height: 1; }
+.honors-gpa span { grid-column: 2; align-self: end; }
+.honors-gpa span:last-child { align-self: start; color: #e0ebff; font-size: .64rem; }
+.honors-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .85rem; }
+.honors-card { --honor-accent: #254bbb; --honor-tint: #edf2ff; min-width: 0; padding: 1.1rem; border: 1px solid #dbe1ea; border-top: 3px solid var(--honor-accent); border-radius: 12px; background: linear-gradient(180deg,var(--honor-tint),white 8rem); box-shadow: 0 7px 20px #132c500d; }
+.honors-court { --honor-accent: #315bd0; --honor-tint: #f0f4ff; }
+.honors-pitch { --honor-accent: #36445c; --honor-tint: #edf0f4; }
+.honors-category { display: flex; align-items: center; gap: .6rem; color: var(--honor-accent); }
+.honors-category svg { width: 2rem; height: 2rem; padding: .35rem; border-radius: 8px; background: var(--honor-tint); fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.honors-card h3 { margin: .6rem 0 .7rem; color: var(--navy); font-size: 1rem; }
+.honors-card ul { list-style: none; padding: 0; font: 400 .88rem/1.45 Arial, sans-serif; }
+.honors-card li { border-top: 1px solid #dfe5ee; padding: .62rem 0; }
+.honors-card li:last-child { padding-bottom: 0; }
+.honors-card li span { display: block; margin-top: .18rem; color: #43536a; }
+@media (max-width: 700px) {
+  .honors-grid { grid-template-columns: minmax(0,1fr); }
+  .honors-header { gap: .7rem; margin-bottom: .9rem; }
+  .honors-gpa { width: fit-content; }
+}
+
+.classroom-feature { display: flex; align-items: center; gap: .65rem; padding: .65rem .75rem; background: #16274b; color: #fff; border-radius: 9px; font: 700 .88rem/1.35 Arial, sans-serif; }
+.classroom-feature svg { width: 1.55rem; flex: 0 0 1.55rem; fill: none; stroke: #a8bfff; stroke-width: 1.6; stroke-linejoin: round; }
+.classroom-feature span, .classroom-label { display: block; font: 800 .65rem/1.4 Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+.classroom-feature span { color: #c9d8ff; margin-bottom: .15rem; }
+.classroom-label { margin: .8rem 0 .4rem; color: #36445c; }
+.honors-card .classroom-courses { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .4rem; }
+.honors-card .classroom-courses li { display: flex; align-items: center; gap: .4rem; min-width: 0; padding: .42rem .5rem; border: 1px solid #dfe5ee; border-radius: 7px; background: #f5f7fb; }
+.classroom-courses .classroom-honors { grid-column: 1 / -1; font-weight: 700; }
+.classroom-courses strong { color: #254bbb; font-size: 1.1rem; }
+.honors-card .classroom-courses span { margin: 0; font-size: .75rem; line-height: 1.25; }
