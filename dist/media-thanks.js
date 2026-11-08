@@ -1,6 +1,7 @@
 (() => {
   // Add partners here once; both sport profiles and highlights pages share this section.
   const partners = [
+    { name: 'Country Roads Hoops', logo: 'assets/media-partners/country-roads-hoops.png', url: 'https://www.instagram.com/countryroadhoops?rpxt=MTBudzNhYmU3NmhqaQ==' },
     { name: 'Pizzographyy', logo: 'assets/media-partners/pizzographyy.png', url: 'https://www.instagram.com/pizzographyy?psln=MWo1aTI2MmdybmUzcQ%3D%3D' },
     { name: 'Haus Media', logo: 'assets/media-partners/haus-media.png', url: 'https://www.facebook.com/share/1DWEiRPz4A/?mibextid=wwXIfr' },
     { name: 'Hurricane Media', logo: 'assets/media-partners/hurricane-media.png', url: 'https://www.facebook.com/share/1FSC4wUxdm/?mibextid=wwXIfr' },
