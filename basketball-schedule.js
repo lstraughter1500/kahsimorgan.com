@@ -100,6 +100,18 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
     "address": "775 Husky Way, Elkview, WV 25071"
   },
   {
+    "id": "2026-12-29-8",
+    "date": "2026-12-29",
+    "startTime": null,
+    "opponent": "Shady Spring",
+    "title": "vs Shady Spring",
+    "kind": "Tournament",
+    "event": "Little General Battle for the Armory",
+    "note": "",
+    "venue": "Beckley-Raleigh County Convention Center",
+    "address": "200 Armory Drive, Beckley, WV 25801"
+  },
+  {
     "id": "2026-12-30-9",
     "date": "2026-12-30",
     "startTime": null,
