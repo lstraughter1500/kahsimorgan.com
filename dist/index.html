@@ -36,13 +36,15 @@
     <link rel="preload" as="image" href="assets/intro-basketball.png">
     <link rel="preload" as="image" href="assets/intro-soccer-ball.png">
     <link rel="stylesheet" href="styles.css?v=honors-coursework">
-    <link rel="stylesheet" href="intro.css?v=20261028-reference-ending">
+    <link rel="stylesheet" href="intro.css?v=km-logo-hd">
   </head>
   <body>
     <div class="recruit-intro" data-intro-overlay hidden aria-label="Kahsi Morgan introduction">
       <div class="recruit-intro-backdrop" aria-hidden="true"></div>
       <div class="recruit-intro-brand" aria-hidden="true">
-        <img class="recruit-intro-logo" src="assets/intro-km-white.svg" width="208" height="126" alt="">
+        <div class="recruit-intro-logo">
+          <img src="assets/km-logo.png" width="1254" height="1254" alt="">
+        </div>
         <div class="recruit-intro-logo-rule"></div>
         <div class="recruit-intro-name">Kahsi Morgan</div>
         <div class="recruit-intro-motto">Built Different.</div>
@@ -155,44 +157,34 @@
         </div>
       </section>
 
-      <section class="profile-grid">
-        <a class="sport-panel sport-panel-link" id="soccer" href="soccer.html" aria-label="Open full soccer profile">
-          <div class="panel-title">
-            <span>Soccer Profile</span>
-            <img src="assets/km-logo.png" alt="">
-          </div>
-          <div class="panel-body">
-            <dl class="stat-table">
-              <div>
-                <dt>Position</dt>
-                <dd>Center Attacking Mid</dd>
-              </div>
-              <div>
-                <dt>Dominant Foot</dt>
-                <dd>Right</dd>
-              </div>
-              <div>
-                <dt>Secondary Positions</dt>
-                <dd>Winger / Striker</dd>
-              </div>
-              <div>
-                <dt>Varsity Experience</dt>
-                <dd>2 years</dd>
-              </div>
-              <div>
-                <dt>Role</dt>
-                <dd>Starter/Captain</dd>
-              </div>
-              <div class="profile-action-row">
-                <dd><span class="profile-cta">View Full Profile</span></dd>
-              </div>
-            </dl>
-            <figure class="media-card" data-profile-tile="soccer">
-              <img src="assets/soccer-black.jpeg" alt="Kahsi Morgan on the soccer field in black and blue jersey">
-            </figure>
-          </div>
-        </a>
+      <section class="events-section" id="upcoming-games" aria-label="Upcoming basketball games">
+        <div class="section-heading">
+          <p>Upcoming Events</p>
+          <h2>Schedule &amp; Showcases</h2>
+        </div>
+        <div class="events-grid basketball-events-grid">
+          <article class="events-panel">
+            <div class="panel-title">
+              <span>2026–2027 Basketball Schedule</span>
+              <img src="assets/km-logo.png" alt="">
+            </div>
+            <p class="schedule-help">Next five upcoming events. Times TBA. Select a game for details and directions.</p>
+          <ul class="schedule-key" aria-label="Schedule color key">
+              <li><span class="key-home" aria-hidden="true"></span>Home</li>
+              <li><span class="key-away" aria-hidden="true"></span>Away</li>
+              <li><span class="key-canada" aria-hidden="true"></span>Canada Exhibition</li>
+              <li><span class="key-hope" aria-hidden="true"></span>Hope Gas Holiday Classic</li>
+              <li><span class="key-armory" aria-hidden="true"></span>Battle for the Armory</li>
+            </ul>
+          <div class="event-list" data-basketball-schedule="upcoming">
+              <div class="schedule-empty"><p>Loading upcoming games…</p></div>
+            </div>
+            <div class="schedule-actions"><a class="button secondary" href="basketball-schedule.html">View Full Schedule</a></div>
+          </article>
+        </div>
+      </section>
 
+      <section class="profile-grid">
         <a class="sport-panel sport-panel-link" id="basketball" href="basketball.html" aria-label="Open full basketball profile">
           <div class="panel-title">
             <span>Basketball Profile</span>
@@ -226,6 +218,43 @@
             </dl>
             <figure class="media-card" data-profile-tile="basketball">
               <img src="assets/basketball-dribble.jpeg" alt="Kahsi Morgan dribbling a basketball in studio portrait">
+            </figure>
+          </div>
+        </a>
+
+        <a class="sport-panel sport-panel-link" id="soccer" href="soccer.html" aria-label="Open full soccer profile">
+          <div class="panel-title">
+            <span>Soccer Profile</span>
+            <img src="assets/km-logo.png" alt="">
+          </div>
+          <div class="panel-body">
+            <dl class="stat-table">
+              <div>
+                <dt>Position</dt>
+                <dd>Center Attacking Mid</dd>
+              </div>
+              <div>
+                <dt>Dominant Foot</dt>
+                <dd>Right</dd>
+              </div>
+              <div>
+                <dt>Secondary Positions</dt>
+                <dd>Winger / Striker</dd>
+              </div>
+              <div>
+                <dt>Varsity Experience</dt>
+                <dd>2 years</dd>
+              </div>
+              <div>
+                <dt>Role</dt>
+                <dd>Starter/Captain</dd>
+              </div>
+              <div class="profile-action-row">
+                <dd><span class="profile-cta">View Full Profile</span></dd>
+              </div>
+            </dl>
+            <figure class="media-card" data-profile-tile="soccer">
+              <img src="assets/soccer-black.jpeg" alt="Kahsi Morgan on the soccer field in black and blue jersey">
             </figure>
           </div>
         </a>
@@ -302,33 +331,6 @@
             <p class="social-connect-location">Charleston, WV</p>
           </div>
           <button type="button" class="button primary social-connect-contact" data-open-contact-form>Contact Kahsi</button>
-        </div>
-      </section>
-
-      <section class="events-section" id="upcoming-games" aria-label="Upcoming basketball games">
-        <div class="section-heading">
-          <p>Upcoming Events</p>
-          <h2>Schedule &amp; Showcases</h2>
-        </div>
-        <div class="events-grid basketball-events-grid">
-          <article class="events-panel">
-            <div class="panel-title">
-              <span>2026–2027 Basketball Schedule</span>
-              <img src="assets/km-logo.png" alt="">
-            </div>
-            <p class="schedule-help">Next five upcoming events. Times TBA. Select a game for details and directions.</p>
-          <ul class="schedule-key" aria-label="Schedule color key">
-              <li><span class="key-home" aria-hidden="true"></span>Home</li>
-              <li><span class="key-away" aria-hidden="true"></span>Away</li>
-              <li><span class="key-canada" aria-hidden="true"></span>Canada Exhibition</li>
-              <li><span class="key-hope" aria-hidden="true"></span>Hope Gas Holiday Classic</li>
-              <li><span class="key-armory" aria-hidden="true"></span>Battle for the Armory</li>
-            </ul>
-          <div class="event-list" data-basketball-schedule="upcoming">
-              <div class="schedule-empty"><p>Loading upcoming games…</p></div>
-            </div>
-            <div class="schedule-actions"><a class="button secondary" href="basketball-schedule.html">View Full Schedule</a></div>
-          </article>
         </div>
       </section>
 
@@ -443,11 +445,11 @@
     </dialog>
     <script src="contact-form.js?v=20261026-contact-options"></script>
     <script src="attendance.js?v=20261029-rsvp"></script>
-    <script src="basketball-schedule.js?v=armory-dec29"></script>
+    <script src="basketball-schedule.js?v=royal-crown-tipoff"></script>
     <script src="event-countdown.js?v=20261029-time-tba"></script>
     <script src="spotlight.js?v=20261027-wide"></script>
     <script src="media-tiles.js"></script>
-    <script src="intro.js?v=20261028-reference-ending"></script>
+    <script src="intro.js?v=km-logo-hd"></script>
     <script>
       (() => {
         const heroImage = document.querySelector(".hero-photo-left img");

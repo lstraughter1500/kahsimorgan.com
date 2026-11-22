@@ -4,7 +4,9 @@
 .recruit-intro { position: fixed; inset: 0; z-index: 1000; overflow: hidden; color: #fff; font-family: Arial, sans-serif; isolation: isolate; }
 .recruit-intro-backdrop { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 100%, #11274e 0, #080f1b 42%, #05070b 76%); }
 .recruit-intro-brand { position: absolute; top: 47%; left: 50%; transform: translate(-50%, -50%); width: min(80vw, 900px); text-align: center; }
-.recruit-intro-logo { width: clamp(150px, 16vw, 210px); height: auto; margin: 0 auto 1.8rem; opacity: 0; will-change: transform, opacity; }
+.recruit-intro-logo { position: relative; overflow: hidden; width: clamp(150px, 16vw, 210px); aspect-ratio: 926 / 525; margin: 0 auto 1.8rem; opacity: 0; }
+/* Frame the visible bounds of the original transparent logo. */
+.recruit-intro-logo img { position: absolute; top: -68.57%; left: -16.41%; width: 135.42%; max-width: none; height: auto; filter: brightness(0) invert(1); }
 .recruit-intro-name { font: 700 clamp(20px, 2.25vw, 32px)/1.25 Arial, sans-serif; letter-spacing: .17em; text-transform: uppercase; opacity: 0; }
 .recruit-intro-motto { margin-top: .6rem; font: 800 clamp(36px, 5vw, 64px)/1.08 Arial, sans-serif; letter-spacing: -.045em; text-transform: uppercase; opacity: 0; }
 .recruit-intro-class { margin-top: 1.5rem; font: 600 clamp(10px, 1.1vw, 14px)/1.6 Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: #a9b3c5; opacity: 0; }

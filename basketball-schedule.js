@@ -6,9 +6,9 @@ window.KAHSI_BASKETBALL_SCHEDULE = [
   {
     "id": "2026-11-28-1",
     "date": "2026-11-28",
-    "startTime": null,
-    "opponent": "Canada Exhibition Invitational",
-    "title": "Canada Exhibition Invitational",
+    "startTime": "2026-11-28T16:30:00-05:00",
+    "opponent": "Royal Crown Academy",
+    "title": "vs Royal Crown Academy",
     "kind": "Exhibition",
     "event": "Canada Exhibition Invitational",
     "note": "",

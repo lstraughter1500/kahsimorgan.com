@@ -45,10 +45,10 @@
   };
   const clamp = v => Math.max(0, Math.min(1, v));
   const easeOut = v => 1 - (1 - clamp(v)) ** 3;
-  function reveal(el, time, at, scale = false) {
+  function reveal(el, time, at) {
     const p = easeOut((time - at) / 360);
     el.style.opacity = p;
-    el.style.transform = `translateY(${(1 - p) * 8}px) scale(${scale ? .94 + .06 * p : 1})`;
+    el.style.transform = `translateY(${(1 - p) * 8}px)`;
   }
   // Closed-form ballistic arcs: gravity is constant; each impact loses energy.
   function bounce(seconds, height, gravity, restitution) {
@@ -67,7 +67,7 @@
   function render(time) {
     lastTime = time;
     const w = overlay.clientWidth, h = overlay.clientHeight, mobile = w <= 760;
-    reveal(elements.logo, time, 50, true);
+    elements.logo.style.opacity = easeOut((time - 50) / 360);
     reveal(elements.rule, time, 120);
     reveal(elements.name, time, 320);
     reveal(elements.motto, time, 650);
